@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: 37e396d3a6fd9473292fd1a77af6a724
+timeCreated: 1448188458
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: abdomen
+    100002: abdomen 1
+    100004: abdomen2
+    100006: abdomen2 1
+    100008: Character1_Ctrl_ChestEndEffector
+    100010: Character1_Ctrl_ChestOriginEffector
+    100012: Character1_Ctrl_Head
+    100014: Character1_Ctrl_HeadEffector
+    100016: Character1_Ctrl_Hips
+    100018: Character1_Ctrl_HipsEffector
+    100020: Character1_Ctrl_LeftAnkleEffector
+    100022: Character1_Ctrl_LeftArm
+    100024: Character1_Ctrl_LeftElbowEffector
+    100026: Character1_Ctrl_LeftFoot
+    100028: Character1_Ctrl_LeftForeArm
+    100030: Character1_Ctrl_LeftHand
+    100032: Character1_Ctrl_LeftHipEffector
+    100034: Character1_Ctrl_LeftKneeEffector
+    100036: Character1_Ctrl_LeftLeg
+    100038: Character1_Ctrl_LeftShoulderEffector
+    100040: Character1_Ctrl_LeftUpLeg
+    100042: Character1_Ctrl_LeftWristEffector
+    100044: Character1_Ctrl_Reference
+    100046: Character1_Ctrl_RightAnkleEffector
+    100048: Character1_Ctrl_RightArm
+    100050: Character1_Ctrl_RightElbowEffector
+    100052: Character1_Ctrl_RightFoot
+    100054: Character1_Ctrl_RightForeArm
+    100056: Character1_Ctrl_RightHand
+    100058: Character1_Ctrl_RightHipEffector
+    100060: Character1_Ctrl_RightKneeEffector
+    100062: Character1_Ctrl_RightLeg
+    100064: Character1_Ctrl_RightShoulderEffector
+    100066: Character1_Ctrl_RightUpLeg
+    100068: Character1_Ctrl_RightWristEffector
+    100070: Character1_Ctrl_Spine
+    100072: Character1_Ctrl_Spine1
+    100074: Character1_Ctrl_Spine2
+    100076: chest
+    100078: chest 1
+    100080: G2FSimplifiedEyes_394
+    100082: G2FSimplifiedEyes_394.Shape_LOD0
+    100084: G2FSimplifiedEyes_394.Shape_LOD1
+    100086: G2FSimplifiedEyes_394.Shape_LOD2
+    100088: G2FSimplifiedEyes_394.Shape_LOD3
+    100090: Genesis2Female
+    100092: Genesis2Female.Shape_LOD3
+    100094: head
+    100096: head 1
+    100098: hip
+    100100: hip 1
+    100102: //RootNode
+    100104: lBigToe
+    100106: lCarpal1
+    100108: lCarpal2
+    100110: lCollar
+    100112: lEye
+    100114: lEye 1
+    100116: lFoot
+    100118: lForeArm
+    100120: lHand
+    100122: lIndex1
+    100124: lIndex2
+    100126: lIndex3
+    100128: lMid1
+    100130: lMid2
+    100132: lMid3
+    100134: lowerJaw
+    100136: lPectoral
+    100138: lPinky1
+    100140: lPinky2
+    100142: lPinky3
+    100144: lRing1
+    100146: lRing2
+    100148: lRing3
+    100150: lShin
+    100152: lShldr
+    100154: lSmallToe1
+    100156: lSmallToe2
+    100158: lSmallToe3
+    100160: lSmallToe4
+    100162: lThigh
+    100164: lThumb1
+    100166: lThumb2
+    100168: lThumb3
+    100170: lToe
+    100172: neck
+    100174: neck 1
+    100176: pelvis
+    100178: rBigToe
+    100180: rCarpal1
+    100182: rCarpal2
+    100184: rCollar
+    100186: rEye
+    100188: rEye 1
+    100190: rFoot
+    100192: rForeArm
+    100194: rHand
+    100196: rIndex1
+    100198: rIndex2
+    100200: rIndex3
+    100202: rMid1
+    100204: rMid2
+    100206: rMid3
+    100208: rPectoral
+    100210: rPinky1
+    100212: rPinky2
+    100214: rPinky3
+    100216: rRing1
+    100218: rRing2
+    100220: rRing3
+    100222: rShin
+    100224: rShldr
+    100226: rSmallToe1
+    100228: rSmallToe2
+    100230: rSmallToe3
+    100232: rSmallToe4
+    100234: rThigh
+    100236: rThumb1
+    100238: rThumb2
+    100240: rThumb3
+    100242: rToe
+    100244: tongue01
+    100246: tongue02
+    100248: tongue03
+    100250: tongue04
+    100252: tongue05
+    100254: tongueBase
+    100256: tongueTip
+    100258: upperJaw
+    400000: abdomen
+    400002: abdomen 1
+    400004: abdomen2
+    400006: abdomen2 1
+    400008: Character1_Ctrl_ChestEndEffector
+    400010: Character1_Ctrl_ChestOriginEffector
+    400012: Character1_Ctrl_Head
+    400014: Character1_Ctrl_HeadEffector
+    400016: Character1_Ctrl_Hips
+    400018: Character1_Ctrl_HipsEffector
+    400020: Character1_Ctrl_LeftAnkleEffector
+    400022: Character1_Ctrl_LeftArm
+    400024: Character1_Ctrl_LeftElbowEffector
+    400026: Character1_Ctrl_LeftFoot
+    400028: Character1_Ctrl_LeftForeArm
+    400030: Character1_Ctrl_LeftHand
+    400032: Character1_Ctrl_LeftHipEffector
+    400034: Character1_Ctrl_LeftKneeEffector
+    400036: Character1_Ctrl_LeftLeg
+    400038: Character1_Ctrl_LeftShoulderEffector
+    400040: Character1_Ctrl_LeftUpLeg
+    400042: Character1_Ctrl_LeftWristEffector
+    400044: Character1_Ctrl_Reference
+    400046: Character1_Ctrl_RightAnkleEffector
+    400048: Character1_Ctrl_RightArm
+    400050: Character1_Ctrl_RightElbowEffector
+    400052: Character1_Ctrl_RightFoot
+    400054: Character1_Ctrl_RightForeArm
+    400056: Character1_Ctrl_RightHand
+    400058: Character1_Ctrl_RightHipEffector
+    400060: Character1_Ctrl_RightKneeEffector
+    400062: Character1_Ctrl_RightLeg
+    400064: Character1_Ctrl_RightShoulderEffector
+    400066: Character1_Ctrl_RightUpLeg
+    400068: Character1_Ctrl_RightWristEffector
+    400070: Character1_Ctrl_Spine
+    400072: Character1_Ctrl_Spine1
+    400074: Character1_Ctrl_Spine2
+    400076: chest
+    400078: chest 1
+    400080: G2FSimplifiedEyes_394
+    400082: G2FSimplifiedEyes_394.Shape_LOD0
+    400084: G2FSimplifiedEyes_394.Shape_LOD1
+    400086: G2FSimplifiedEyes_394.Shape_LOD2
+    400088: G2FSimplifiedEyes_394.Shape_LOD3
+    400090: Genesis2Female
+    400092: Genesis2Female.Shape_LOD3
+    400094: head
+    400096: head 1
+    400098: hip
+    400100: hip 1
+    400102: //RootNode
+    400104: lBigToe
+    400106: lCarpal1
+    400108: lCarpal2
+    400110: lCollar
+    400112: lEye
+    400114: lEye 1
+    400116: lFoot
+    400118: lForeArm
+    400120: lHand
+    400122: lIndex1
+    400124: lIndex2
+    400126: lIndex3
+    400128: lMid1
+    400130: lMid2
+    400132: lMid3
+    400134: lowerJaw
+    400136: lPectoral
+    400138: lPinky1
+    400140: lPinky2
+    400142: lPinky3
+    400144: lRing1
+    400146: lRing2
+    400148: lRing3
+    400150: lShin
+    400152: lShldr
+    400154: lSmallToe1
+    400156: lSmallToe2
+    400158: lSmallToe3
+    400160: lSmallToe4
+    400162: lThigh
+    400164: lThumb1
+    400166: lThumb2
+    400168: lThumb3
+    400170: lToe
+    400172: neck
+    400174: neck 1
+    400176: pelvis
+    400178: rBigToe
+    400180: rCarpal1
+    400182: rCarpal2
+    400184: rCollar
+    400186: rEye
+    400188: rEye 1
+    400190: rFoot
+    400192: rForeArm
+    400194: rHand
+    400196: rIndex1
+    400198: rIndex2
+    400200: rIndex3
+    400202: rMid1
+    400204: rMid2
+    400206: rMid3
+    400208: rPectoral
+    400210: rPinky1
+    400212: rPinky2
+    400214: rPinky3
+    400216: rRing1
+    400218: rRing2
+    400220: rRing3
+    400222: rShin
+    400224: rShldr
+    400226: rSmallToe1
+    400228: rSmallToe2
+    400230: rSmallToe3
+    400232: rSmallToe4
+    400234: rThigh
+    400236: rThumb1
+    400238: rThumb2
+    400240: rThumb3
+    400242: rToe
+    400244: tongue01
+    400246: tongue02
+    400248: tongue03
+    400250: tongue04
+    400252: tongue05
+    400254: tongueBase
+    400256: tongueTip
+    400258: upperJaw
+    4300000: G2FSimplifiedEyes_394.Shape_LOD0
+    4300002: G2FSimplifiedEyes_394.Shape_LOD1
+    4300004: G2FSimplifiedEyes_394.Shape_LOD2
+    4300006: G2FSimplifiedEyes_394.Shape_LOD3
+    4300008: Genesis2Female.Shape_LOD3
+    9500000: //RootNode
+    13700000: G2FSimplifiedEyes_394.Shape_LOD0
+    13700002: G2FSimplifiedEyes_394.Shape_LOD1
+    13700004: G2FSimplifiedEyes_394.Shape_LOD2
+    13700006: G2FSimplifiedEyes_394.Shape_LOD3
+    13700008: Genesis2Female.Shape_LOD3
+    20500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - .25
+    - .125
+    - .0625
+    - .00999999978
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
