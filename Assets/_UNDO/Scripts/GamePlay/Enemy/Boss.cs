@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boss : Enemy {
 
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +15,12 @@ public class Boss : Enemy {
 	void Update () {
 		
 	}
+
+	public override void TakeHit( int damage, Vector3 point ) {
+		FlashCharacter();
+		base.TakeHit( damage,point);
+
+	}
+
+
 }

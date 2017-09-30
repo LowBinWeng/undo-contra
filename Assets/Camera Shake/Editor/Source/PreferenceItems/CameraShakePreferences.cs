@@ -7,7 +7,7 @@
 // Copyright (c) 2012-2014 Thinksquirrel Software, LLC
 //
 using System.IO;
-using Ionic.Zip;
+//using Ionic.Zip;
 using Thinksquirrel.CameraShakeInternal;
 using UnityEditor;
 using UnityEngine;
@@ -162,14 +162,14 @@ namespace Thinksquirrel.CameraShakeEditor
                 {
                     using (var inputStream = new MemoryStream(s_Www.bytes))
                     {
-                        using (ZipFile zip = ZipFile.Read(inputStream))
-                        {
-                            string archivePath = Path.Combine(s_DocumentationPath, VersionInfo.version);
-                            if (!Directory.Exists(archivePath))
-                                Directory.CreateDirectory(archivePath);
-
-                            zip.ExtractAll(archivePath, ExtractExistingFileAction.OverwriteSilently);
-                        }
+//                        using (ZipFile zip = ZipFile.Read(inputStream))
+//                        {
+//                            string archivePath = Path.Combine(s_DocumentationPath, VersionInfo.version);
+//                            if (!Directory.Exists(archivePath))
+//                                Directory.CreateDirectory(archivePath);
+//
+//                            zip.ExtractAll(archivePath, ExtractExistingFileAction.OverwriteSilently);
+//                        }
                     }
 
                     s_ProgressColor = Color.green;
