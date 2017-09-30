@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : Character {
 
 	public float frequency = 1f;
 	public float distance = 1f;

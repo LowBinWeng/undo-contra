@@ -51,19 +51,19 @@ public class TimeDilationManager : MonoBehaviour {
 	#if UNITY_EDITOR
 	// Debug speed up
 	void Update() {
-		if ( Input.GetKeyDown(KeyCode.Space )) {
-			if 		( Time.timeScale == 1f ) Time.timeScale = 2f;
-			else if ( Time.timeScale == 2f ) Time.timeScale = 3f;
-			else if ( Time.timeScale == 3f ) Time.timeScale = 1f;
-
-			if ( Time.timeScale == 1f ) {
-				debugCanvas.SetActive(false);
-			}
-			else {
-				debugCanvas.SetActive(true);
-				debugText.text = Time.timeScale + "X";
-			}
-		}
+//		if ( Input.GetKeyDown(KeyCode.Space )) {
+//			if 		( Time.timeScale == 1f ) Time.timeScale = 2f;
+//			else if ( Time.timeScale == 2f ) Time.timeScale = 3f;
+//			else if ( Time.timeScale == 3f ) Time.timeScale = 1f;
+//
+//			if ( Time.timeScale == 1f ) {
+//				debugCanvas.SetActive(false);
+//			}
+//			else {
+//				debugCanvas.SetActive(true);
+//				debugText.text = Time.timeScale + "X";
+//			}
+//		}
 	}
 	#endif
 }

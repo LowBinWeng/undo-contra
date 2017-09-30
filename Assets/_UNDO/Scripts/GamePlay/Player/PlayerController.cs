@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PathologicalGames;
 public class PlayerController : MonoBehaviour {
 
 	[Header("Character")]
 	public float moveSpeed = 1f;
 	public Animator anim;
+	public Transform spawnPoint;
+	public GameObject bulletPrefab;
+	public float cooldownDuration = 0.1f;
+	float cooldownTime = 0f;
+
 
 	[Header("CrossHair")]
 	public Transform crossHair;
@@ -28,6 +33,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		ControlMovement ();
 		ControlCrossHair ();
+		ControlAttack ();
+		CountCooldown ();
 	}
 
 	void ControlMovement() {
@@ -56,4 +63,15 @@ public class PlayerController : MonoBehaviour {
 		lastMousePos = Input.mousePosition;
 	}
 
+	void ControlAttack() {
+		if (Input.GetMouseButton (0) && cooldownTime <= 0f) {
+			Transform t = PoolManager.Pools ["Attacks"].Spawn (bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+			t.LookAt (crossHair);
+			cooldownTime = cooldownDuration;
+		}
+	}
+
+	void CountCooldown() {
+		if (cooldownTime > 0f) cooldownTime -= Time.deltaTime;
+	}
 }
