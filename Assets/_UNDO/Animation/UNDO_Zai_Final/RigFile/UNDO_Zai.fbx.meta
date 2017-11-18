@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: c5e4dab76d8ef41f8899b5b79403d570
+timeCreated: 1511020455
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ctrl_Global
+    100002: Head
+    100004: L_ankle
+    100006: L_Arm
+    100008: L_ball
+    100010: L_Elbow
+    100012: L_Finger
+    100014: L_forearm
+    100016: L_hip
+    100018: L_knee
+    100020: L_Shoulder
+    100022: L_toe
+    100024: LGun
+    100026: Neck
+    100028: Place_Joint
+    100030: R_ankle
+    100032: R_Arm
+    100034: R_ball
+    100036: R_Elbow
+    100038: R_Finger
+    100040: R_forearm
+    100042: R_hip
+    100044: R_knee
+    100046: R_Shoulder
+    100048: R_toe
+    100050: RGun
+    100052: Rig_Spine01
+    100054: Spine02
+    100056: Spine03
+    100058: Spine04
+    100060: //RootNode
+    100062: Undozai
+    400000: Ctrl_Global
+    400002: Head
+    400004: L_ankle
+    400006: L_Arm
+    400008: L_ball
+    400010: L_Elbow
+    400012: L_Finger
+    400014: L_forearm
+    400016: L_hip
+    400018: L_knee
+    400020: L_Shoulder
+    400022: L_toe
+    400024: LGun
+    400026: Neck
+    400028: Place_Joint
+    400030: R_ankle
+    400032: R_Arm
+    400034: R_ball
+    400036: R_Elbow
+    400038: R_Finger
+    400040: R_forearm
+    400042: R_hip
+    400044: R_knee
+    400046: R_Shoulder
+    400048: R_toe
+    400050: RGun
+    400052: Rig_Spine01
+    400054: Spine02
+    400056: Spine03
+    400058: Spine04
+    400060: //RootNode
+    400062: Undozai
+    4300000: Undozai
+    4300002: LGun
+    4300004: RGun
+    9500000: //RootNode
+    13700000: LGun
+    13700002: RGun
+    13700004: Undozai
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn1
+    second: {fileID: 2100000, guid: 5575183d874664ed9a2a1a83117b4fe9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn2
+    second: {fileID: 2100000, guid: f5cedbbdbbac641f4aacb08c7f0d21fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn3
+    second: {fileID: 2100000, guid: b52fe251ecb1e4896af879e0b86ea8c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn4
+    second: {fileID: 2100000, guid: 227d92238213c41f0859a39b9e03ccb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn5
+    second: {fileID: 2100000, guid: 91d9ff15273aa494cbaf770e862bc39c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn6
+    second: {fileID: 2100000, guid: 251017e0c4f8a4c699b508d7a7a5be9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun04_combine_blinn7
+    second: {fileID: 2100000, guid: c93ef457e5f32409a864089795beb08e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun05_gun_22_gun_22_gun_22_gun_2_gun2_kk_gun2_kk_gun_blinn4
+    second: {fileID: 2100000, guid: 411cbf13da8424668a02a28a9f740f01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 6e1c619033ec144a4a6957cdb04a6d63, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

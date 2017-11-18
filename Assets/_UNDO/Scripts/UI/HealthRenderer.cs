@@ -9,10 +9,17 @@ public class HealthRenderer : MonoBehaviour {
 
 	public HealthBarOwner character;
 	public Image hpFillBar;
+	public float actualMin = 0f;
+	public float actualMax = 1f;
 
 	public void UpdateHPRenderer(float hpPercentage) {
-		hpFillBar.fillAmount = hpPercentage;
-		if ( hpFillBar.fillAmount == 0f ) {
+		// Remap
+		//output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start)
+
+		float actualValue = actualMin + (( actualMax - actualMin) / (1f-0f)) * ( hpPercentage - 0f);
+		hpFillBar.fillAmount = actualValue;
+
+		if ( hpFillBar.fillAmount == actualMin ) {
 			GameOverManager.Instance.ShowGameOver();
 		}
 	}

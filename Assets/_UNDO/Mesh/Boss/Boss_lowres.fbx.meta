@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: d7c8b8761ed4449bfa99bb85ea930bbc
+timeCreated: 1510997811
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: LowRes_Aimer
+    100004: LowRes_Attach_4
+    100006: LowRes_Back
+    100008: LowRes_Back 1
+    100010: LowRes_Back 2
+    100012: LowRes_Back 3
+    100014: LowRes_Back_Body
+    100016: LowRes_Back_Bottom
+    100018: LowRes_Back_Top
+    100020: LowRes_Base
+    100022: LowRes_Base 1
+    100024: LowRes_Body
+    100026: LowRes_Body 1
+    100028: LowRes_Bolt_01
+    100030: LowRes_Bolt_02
+    100032: LowRes_Bolt_1
+    100034: LowRes_Bolt_1 1
+    100036: LowRes_Bolt_2
+    100038: LowRes_Bolt_2 1
+    100040: LowRes_Bottom
+    100042: LowRes_Bottom 1
+    100044: LowRes_Bottom 2
+    100046: LowRes_Button
+    100048: LowRes_Button 1
+    100050: LowRes_Cartridge
+    100052: LowRes_Cartridge 1
+    100054: LowRes_Center
+    100056: LowRes_Center 1
+    100058: LowRes_Center 2
+    100060: LowRes_Cockpit
+    100062: LowRes_Connect
+    100064: LowRes_Connect 1
+    100066: LowRes_Connector
+    100068: LowRes_Connector 1
+    100070: LowRes_Connectors
+    100072: LowRes_Container
+    100074: LowRes_Container 1
+    100076: LowRes_Cover
+    100078: LowRes_Cover 1
+    100080: LowRes_Face
+    100082: LowRes_Face 1
+    100084: LowRes_Front
+    100086: LowRes_Front 1
+    100088: LowRes_Front 2
+    100090: LowRes_Front 3
+    100092: LowRes_Front 4
+    100094: LowRes_Front_Body
+    100096: LowRes_Front_Bottom
+    100098: LowRes_Front_Cover
+    100100: LowRes_Front_Top
+    100102: LowRes_Gattling_Gun
+    100104: LowRes_Gattling_Gun 1
+    100106: LowRes_Gattling_Gun_01
+    100108: LowRes_Gattling_Gun_02
+    100110: LowRes_Gun_01
+    100112: LowRes_Gun_02
+    100114: LowRes_Handle_01
+    100116: LowRes_Handle_02
+    100118: LowRes_Handle_03
+    100120: LowRes_Handle_04
+    100122: LowRes_Holes
+    100124: LowRes_Holes 1
+    100126: LowRes_Hydraulics
+    100128: LowRes_Hydraulics 1
+    100130: LowRes_Inner_Plate
+    100132: LowRes_Inner_Plate 1
+    100134: LowRes_inside_01
+    100136: LowRes_inside_02
+    100138: LowRes_Knot_01
+    100140: LowRes_Knot_02
+    100142: LowRes_Laser
+    100144: LowRes_Laser_Beam
+    100146: LowRes_Leg_01
+    100148: LowRes_Leg_02
+    100150: LowRes_Lower_Body
+    100152: LowRes_Lower_Body 1
+    100154: LowRes_Main
+    100156: LowRes_Main 1
+    100158: LowRes_Main 2
+    100160: LowRes_Main 3
+    100162: LowRes_Main 4
+    100164: LowRes_Main 5
+    100166: LowRes_Main_Base
+    100168: LowRes_Main_Body
+    100170: LowRes_Main_Body 1
+    100172: LowRes_Main_Inner_1
+    100174: LowRes_Main_Inner_1 1
+    100176: LowRes_Main_Inner_2
+    100178: LowRes_Main_Inner_2 1
+    100180: LowRes_Main_Inner_3
+    100182: LowRes_Main_Inner_3 1
+    100184: LowRes_Mid
+    100186: LowRes_Middle
+    100188: LowRes_Middle 1
+    100190: LowRes_Panel_01
+    100192: LowRes_Panel_02
+    100194: LowRes_Panels
+    100196: LowRes_Part_1
+    100198: LowRes_Part_1 1
+    100200: LowRes_Part_10
+    100202: LowRes_Part_10 1
+    100204: LowRes_Part_11
+    100206: LowRes_Part_11 1
+    100208: LowRes_Part_12
+    100210: LowRes_Part_12 1
+    100212: LowRes_Part_13
+    100214: LowRes_Part_13 1
+    100216: LowRes_Part_14
+    100218: LowRes_Part_14 1
+    100220: LowRes_Part_15
+    100222: LowRes_Part_15 1
+    100224: LowRes_Part_16
+    100226: LowRes_Part_16 1
+    100228: LowRes_Part_17
+    100230: LowRes_Part_17 1
+    100232: LowRes_Part_2
+    100234: LowRes_Part_2 1
+    100236: LowRes_Part_3
+    100238: LowRes_Part_3 1
+    100240: LowRes_Part_4
+    100242: LowRes_Part_4 1
+    100244: LowRes_Part_5
+    100246: LowRes_Part_5 1
+    100248: LowRes_Part_6
+    100250: LowRes_Part_6 1
+    100252: LowRes_Part_7
+    100254: LowRes_Part_7 1
+    100256: LowRes_Part_8
+    100258: LowRes_Part_8 1
+    100260: LowRes_Part_9
+    100262: LowRes_Part_9 1
+    100264: LowRes_pCube2
+    100266: LowRes_pCube2 1
+    100268: LowRes_pCylinder29
+    100270: LowRes_pCylinder29 1
+    100272: LowRes_Pew_01
+    100274: LowRes_Pew_02
+    100276: LowRes_Pew_03
+    100278: LowRes_Pole_1
+    100280: LowRes_Pole_1 1
+    100282: LowRes_Pole_2
+    100284: LowRes_Pole_2 1
+    100286: LowRes_polySurface101
+    100288: LowRes_polySurface101 1
+    100290: LowRes_polySurface103
+    100292: LowRes_polySurface103 1
+    100294: LowRes_polySurface105
+    100296: LowRes_polySurface105 1
+    100298: LowRes_polySurface106
+    100300: LowRes_polySurface106 1
+    100302: LowRes_polySurface107
+    100304: LowRes_polySurface107 1
+    100306: LowRes_polySurface114
+    100308: LowRes_polySurface114 1
+    100310: LowRes_polySurface120
+    100312: LowRes_polySurface120 1
+    100314: LowRes_polySurface121
+    100316: LowRes_polySurface121 1
+    100318: LowRes_polySurface122
+    100320: LowRes_polySurface122 1
+    100322: LowRes_polySurface123
+    100324: LowRes_polySurface123 1
+    100326: LowRes_polySurface418
+    100328: LowRes_polySurface418 1
+    100330: LowRes_polySurface99
+    100332: LowRes_polySurface99 1
+    100334: LowRes_Refil_01
+    100336: LowRes_Refil_01 1
+    100338: LowRes_Rim
+    100340: LowRes_Ring
+    100342: LowRes_Ring_1
+    100344: LowRes_Ring_1 1
+    100346: LowRes_Ring_2
+    100348: LowRes_Ring_2 1
+    100350: LowRes_Ring_3
+    100352: LowRes_Ring_3 1
+    100354: LowRes_Ring_4
+    100356: LowRes_Ring_4 1
+    100358: LowRes_Ring_5
+    100360: LowRes_Ring_5 1
+    100362: LowRes_Rings
+    100364: LowRes_Rings 1
+    100366: LowRes_Side
+    100368: LowRes_Side 1
+    100370: LowRes_Side_01
+    100372: LowRes_Side_01 1
+    100374: LowRes_Side_02
+    100376: LowRes_Side_03
+    100378: LowRes_Side_Body
+    100380: LowRes_Side_Body 1
+    100382: LowRes_Side_Bottom1
+    100384: LowRes_Side_Bottom2
+    100386: LowRes_Side_Inner
+    100388: LowRes_Side_Inner 1
+    100390: LowRes_Side_Insert_01
+    100392: LowRes_Side_Insert_02
+    100394: LowRes_Side_Panel_01
+    100396: LowRes_Side_Panel_02
+    100398: LowRes_Side_Rim
+    100400: LowRes_Side_Top
+    100402: LowRes_Side_Top1
+    100404: LowRes_Sides
+    100406: LowRes_Sides 1
+    100408: LowRes_Sphere
+    100410: LowRes_Stand
+    100412: LowRes_Stripe
+    100414: LowRes_Stripe 1
+    100416: LowRes_Teeth
+    100418: LowRes_Tip
+    100420: LowRes_Top_Body
+    100422: LowRes_Top_Body 1
+    100424: LowRes_Top_Lid
+    400000: //RootNode
+    400002: LowRes_Aimer
+    400004: LowRes_Attach_4
+    400006: LowRes_Back
+    400008: LowRes_Back 1
+    400010: LowRes_Back 2
+    400012: LowRes_Back 3
+    400014: LowRes_Back_Body
+    400016: LowRes_Back_Bottom
+    400018: LowRes_Back_Top
+    400020: LowRes_Base
+    400022: LowRes_Base 1
+    400024: LowRes_Body
+    400026: LowRes_Body 1
+    400028: LowRes_Bolt_01
+    400030: LowRes_Bolt_02
+    400032: LowRes_Bolt_1
+    400034: LowRes_Bolt_1 1
+    400036: LowRes_Bolt_2
+    400038: LowRes_Bolt_2 1
+    400040: LowRes_Bottom
+    400042: LowRes_Bottom 1
+    400044: LowRes_Bottom 2
+    400046: LowRes_Button
+    400048: LowRes_Button 1
+    400050: LowRes_Cartridge
+    400052: LowRes_Cartridge 1
+    400054: LowRes_Center
+    400056: LowRes_Center 1
+    400058: LowRes_Center 2
+    400060: LowRes_Cockpit
+    400062: LowRes_Connect
+    400064: LowRes_Connect 1
+    400066: LowRes_Connector
+    400068: LowRes_Connector 1
+    400070: LowRes_Connectors
+    400072: LowRes_Container
+    400074: LowRes_Container 1
+    400076: LowRes_Cover
+    400078: LowRes_Cover 1
+    400080: LowRes_Face
+    400082: LowRes_Face 1
+    400084: LowRes_Front
+    400086: LowRes_Front 1
+    400088: LowRes_Front 2
+    400090: LowRes_Front 3
+    400092: LowRes_Front 4
+    400094: LowRes_Front_Body
+    400096: LowRes_Front_Bottom
+    400098: LowRes_Front_Cover
+    400100: LowRes_Front_Top
+    400102: LowRes_Gattling_Gun
+    400104: LowRes_Gattling_Gun 1
+    400106: LowRes_Gattling_Gun_01
+    400108: LowRes_Gattling_Gun_02
+    400110: LowRes_Gun_01
+    400112: LowRes_Gun_02
+    400114: LowRes_Handle_01
+    400116: LowRes_Handle_02
+    400118: LowRes_Handle_03
+    400120: LowRes_Handle_04
+    400122: LowRes_Holes
+    400124: LowRes_Holes 1
+    400126: LowRes_Hydraulics
+    400128: LowRes_Hydraulics 1
+    400130: LowRes_Inner_Plate
+    400132: LowRes_Inner_Plate 1
+    400134: LowRes_inside_01
+    400136: LowRes_inside_02
+    400138: LowRes_Knot_01
+    400140: LowRes_Knot_02
+    400142: LowRes_Laser
+    400144: LowRes_Laser_Beam
+    400146: LowRes_Leg_01
+    400148: LowRes_Leg_02
+    400150: LowRes_Lower_Body
+    400152: LowRes_Lower_Body 1
+    400154: LowRes_Main
+    400156: LowRes_Main 1
+    400158: LowRes_Main 2
+    400160: LowRes_Main 3
+    400162: LowRes_Main 4
+    400164: LowRes_Main 5
+    400166: LowRes_Main_Base
+    400168: LowRes_Main_Body
+    400170: LowRes_Main_Body 1
+    400172: LowRes_Main_Inner_1
+    400174: LowRes_Main_Inner_1 1
+    400176: LowRes_Main_Inner_2
+    400178: LowRes_Main_Inner_2 1
+    400180: LowRes_Main_Inner_3
+    400182: LowRes_Main_Inner_3 1
+    400184: LowRes_Mid
+    400186: LowRes_Middle
+    400188: LowRes_Middle 1
+    400190: LowRes_Panel_01
+    400192: LowRes_Panel_02
+    400194: LowRes_Panels
+    400196: LowRes_Part_1
+    400198: LowRes_Part_1 1
+    400200: LowRes_Part_10
+    400202: LowRes_Part_10 1
+    400204: LowRes_Part_11
+    400206: LowRes_Part_11 1
+    400208: LowRes_Part_12
+    400210: LowRes_Part_12 1
+    400212: LowRes_Part_13
+    400214: LowRes_Part_13 1
+    400216: LowRes_Part_14
+    400218: LowRes_Part_14 1
+    400220: LowRes_Part_15
+    400222: LowRes_Part_15 1
+    400224: LowRes_Part_16
+    400226: LowRes_Part_16 1
+    400228: LowRes_Part_17
+    400230: LowRes_Part_17 1
+    400232: LowRes_Part_2
+    400234: LowRes_Part_2 1
+    400236: LowRes_Part_3
+    400238: LowRes_Part_3 1
+    400240: LowRes_Part_4
+    400242: LowRes_Part_4 1
+    400244: LowRes_Part_5
+    400246: LowRes_Part_5 1
+    400248: LowRes_Part_6
+    400250: LowRes_Part_6 1
+    400252: LowRes_Part_7
+    400254: LowRes_Part_7 1
+    400256: LowRes_Part_8
+    400258: LowRes_Part_8 1
+    400260: LowRes_Part_9
+    400262: LowRes_Part_9 1
+    400264: LowRes_pCube2
+    400266: LowRes_pCube2 1
+    400268: LowRes_pCylinder29
+    400270: LowRes_pCylinder29 1
+    400272: LowRes_Pew_01
+    400274: LowRes_Pew_02
+    400276: LowRes_Pew_03
+    400278: LowRes_Pole_1
+    400280: LowRes_Pole_1 1
+    400282: LowRes_Pole_2
+    400284: LowRes_Pole_2 1
+    400286: LowRes_polySurface101
+    400288: LowRes_polySurface101 1
+    400290: LowRes_polySurface103
+    400292: LowRes_polySurface103 1
+    400294: LowRes_polySurface105
+    400296: LowRes_polySurface105 1
+    400298: LowRes_polySurface106
+    400300: LowRes_polySurface106 1
+    400302: LowRes_polySurface107
+    400304: LowRes_polySurface107 1
+    400306: LowRes_polySurface114
+    400308: LowRes_polySurface114 1
+    400310: LowRes_polySurface120
+    400312: LowRes_polySurface120 1
+    400314: LowRes_polySurface121
+    400316: LowRes_polySurface121 1
+    400318: LowRes_polySurface122
+    400320: LowRes_polySurface122 1
+    400322: LowRes_polySurface123
+    400324: LowRes_polySurface123 1
+    400326: LowRes_polySurface418
+    400328: LowRes_polySurface418 1
+    400330: LowRes_polySurface99
+    400332: LowRes_polySurface99 1
+    400334: LowRes_Refil_01
+    400336: LowRes_Refil_01 1
+    400338: LowRes_Rim
+    400340: LowRes_Ring
+    400342: LowRes_Ring_1
+    400344: LowRes_Ring_1 1
+    400346: LowRes_Ring_2
+    400348: LowRes_Ring_2 1
+    400350: LowRes_Ring_3
+    400352: LowRes_Ring_3 1
+    400354: LowRes_Ring_4
+    400356: LowRes_Ring_4 1
+    400358: LowRes_Ring_5
+    400360: LowRes_Ring_5 1
+    400362: LowRes_Rings
+    400364: LowRes_Rings 1
+    400366: LowRes_Side
+    400368: LowRes_Side 1
+    400370: LowRes_Side_01
+    400372: LowRes_Side_01 1
+    400374: LowRes_Side_02
+    400376: LowRes_Side_03
+    400378: LowRes_Side_Body
+    400380: LowRes_Side_Body 1
+    400382: LowRes_Side_Bottom1
+    400384: LowRes_Side_Bottom2
+    400386: LowRes_Side_Inner
+    400388: LowRes_Side_Inner 1
+    400390: LowRes_Side_Insert_01
+    400392: LowRes_Side_Insert_02
+    400394: LowRes_Side_Panel_01
+    400396: LowRes_Side_Panel_02
+    400398: LowRes_Side_Rim
+    400400: LowRes_Side_Top
+    400402: LowRes_Side_Top1
+    400404: LowRes_Sides
+    400406: LowRes_Sides 1
+    400408: LowRes_Sphere
+    400410: LowRes_Stand
+    400412: LowRes_Stripe
+    400414: LowRes_Stripe 1
+    400416: LowRes_Teeth
+    400418: LowRes_Tip
+    400420: LowRes_Top_Body
+    400422: LowRes_Top_Body 1
+    400424: LowRes_Top_Lid
+    2300000: LowRes_Aimer
+    2300002: LowRes_Attach_4
+    2300004: LowRes_Back 1
+    2300006: LowRes_Back 2
+    2300008: LowRes_Back 3
+    2300010: LowRes_Back_Bottom
+    2300012: LowRes_Back_Top
+    2300014: LowRes_Base
+    2300016: LowRes_Base 1
+    2300018: LowRes_Body
+    2300020: LowRes_Body 1
+    2300022: LowRes_Bolt_01
+    2300024: LowRes_Bolt_02
+    2300026: LowRes_Bolt_1
+    2300028: LowRes_Bolt_1 1
+    2300030: LowRes_Bolt_2
+    2300032: LowRes_Bolt_2 1
+    2300034: LowRes_Bottom
+    2300036: LowRes_Bottom 1
+    2300038: LowRes_Bottom 2
+    2300040: LowRes_Button
+    2300042: LowRes_Button 1
+    2300044: LowRes_Center
+    2300046: LowRes_Center 1
+    2300048: LowRes_Center 2
+    2300050: LowRes_Connect
+    2300052: LowRes_Connect 1
+    2300054: LowRes_Cover
+    2300056: LowRes_Cover 1
+    2300058: LowRes_Face
+    2300060: LowRes_Face 1
+    2300062: LowRes_Front 2
+    2300064: LowRes_Front 3
+    2300066: LowRes_Front 4
+    2300068: LowRes_Front_Bottom
+    2300070: LowRes_Front_Cover
+    2300072: LowRes_Front_Top
+    2300074: LowRes_Gattling_Gun
+    2300076: LowRes_Gattling_Gun 1
+    2300078: LowRes_Handle_01
+    2300080: LowRes_Handle_02
+    2300082: LowRes_Handle_03
+    2300084: LowRes_Handle_04
+    2300086: LowRes_Holes
+    2300088: LowRes_Holes 1
+    2300090: LowRes_Inner_Plate
+    2300092: LowRes_Inner_Plate 1
+    2300094: LowRes_Knot_01
+    2300096: LowRes_Knot_02
+    2300098: LowRes_Laser
+    2300100: LowRes_Lower_Body
+    2300102: LowRes_Lower_Body 1
+    2300104: LowRes_Main 2
+    2300106: LowRes_Main 3
+    2300108: LowRes_Main 4
+    2300110: LowRes_Main 5
+    2300112: LowRes_Main_Base
+    2300114: LowRes_Main_Inner_1
+    2300116: LowRes_Main_Inner_1 1
+    2300118: LowRes_Main_Inner_2
+    2300120: LowRes_Main_Inner_2 1
+    2300122: LowRes_Main_Inner_3
+    2300124: LowRes_Main_Inner_3 1
+    2300126: LowRes_Mid
+    2300128: LowRes_Panel_01
+    2300130: LowRes_Panel_02
+    2300132: LowRes_Panels
+    2300134: LowRes_Part_1
+    2300136: LowRes_Part_1 1
+    2300138: LowRes_Part_10
+    2300140: LowRes_Part_10 1
+    2300142: LowRes_Part_11
+    2300144: LowRes_Part_11 1
+    2300146: LowRes_Part_12
+    2300148: LowRes_Part_12 1
+    2300150: LowRes_Part_13
+    2300152: LowRes_Part_13 1
+    2300154: LowRes_Part_14
+    2300156: LowRes_Part_14 1
+    2300158: LowRes_Part_15
+    2300160: LowRes_Part_15 1
+    2300162: LowRes_Part_16
+    2300164: LowRes_Part_16 1
+    2300166: LowRes_Part_17
+    2300168: LowRes_Part_17 1
+    2300170: LowRes_Part_2
+    2300172: LowRes_Part_2 1
+    2300174: LowRes_Part_3
+    2300176: LowRes_Part_3 1
+    2300178: LowRes_Part_4
+    2300180: LowRes_Part_4 1
+    2300182: LowRes_Part_5
+    2300184: LowRes_Part_5 1
+    2300186: LowRes_Part_6
+    2300188: LowRes_Part_6 1
+    2300190: LowRes_Part_7
+    2300192: LowRes_Part_7 1
+    2300194: LowRes_Part_8
+    2300196: LowRes_Part_8 1
+    2300198: LowRes_Part_9
+    2300200: LowRes_Part_9 1
+    2300202: LowRes_pCube2
+    2300204: LowRes_pCube2 1
+    2300206: LowRes_pCylinder29
+    2300208: LowRes_pCylinder29 1
+    2300210: LowRes_Pew_01
+    2300212: LowRes_Pew_02
+    2300214: LowRes_Pew_03
+    2300216: LowRes_Pole_1
+    2300218: LowRes_Pole_1 1
+    2300220: LowRes_Pole_2
+    2300222: LowRes_Pole_2 1
+    2300224: LowRes_polySurface101
+    2300226: LowRes_polySurface101 1
+    2300228: LowRes_polySurface103
+    2300230: LowRes_polySurface103 1
+    2300232: LowRes_polySurface105
+    2300234: LowRes_polySurface105 1
+    2300236: LowRes_polySurface106
+    2300238: LowRes_polySurface106 1
+    2300240: LowRes_polySurface107
+    2300242: LowRes_polySurface107 1
+    2300244: LowRes_polySurface114
+    2300246: LowRes_polySurface114 1
+    2300248: LowRes_polySurface120
+    2300250: LowRes_polySurface120 1
+    2300252: LowRes_polySurface121
+    2300254: LowRes_polySurface121 1
+    2300256: LowRes_polySurface122
+    2300258: LowRes_polySurface122 1
+    2300260: LowRes_polySurface123
+    2300262: LowRes_polySurface123 1
+    2300264: LowRes_polySurface418
+    2300266: LowRes_polySurface418 1
+    2300268: LowRes_polySurface99
+    2300270: LowRes_polySurface99 1
+    2300272: LowRes_Refil_01
+    2300274: LowRes_Refil_01 1
+    2300276: LowRes_Rim
+    2300278: LowRes_Ring
+    2300280: LowRes_Ring_1
+    2300282: LowRes_Ring_1 1
+    2300284: LowRes_Ring_2
+    2300286: LowRes_Ring_2 1
+    2300288: LowRes_Ring_3
+    2300290: LowRes_Ring_3 1
+    2300292: LowRes_Ring_4
+    2300294: LowRes_Ring_4 1
+    2300296: LowRes_Ring_5
+    2300298: LowRes_Ring_5 1
+    2300300: LowRes_Side
+    2300302: LowRes_Side 1
+    2300304: LowRes_Side_01 1
+    2300306: LowRes_Side_03
+    2300308: LowRes_Side_Bottom1
+    2300310: LowRes_Side_Bottom2
+    2300312: LowRes_Side_Inner
+    2300314: LowRes_Side_Inner 1
+    2300316: LowRes_Side_Insert_01
+    2300318: LowRes_Side_Insert_02
+    2300320: LowRes_Side_Panel_01
+    2300322: LowRes_Side_Panel_02
+    2300324: LowRes_Side_Rim
+    2300326: LowRes_Side_Top
+    2300328: LowRes_Side_Top1
+    2300330: LowRes_Sides
+    2300332: LowRes_Sides 1
+    2300334: LowRes_Sphere
+    2300336: LowRes_Stand
+    2300338: LowRes_Stripe
+    2300340: LowRes_Stripe 1
+    2300342: LowRes_Teeth
+    2300344: LowRes_Tip
+    2300346: LowRes_Top_Body
+    2300348: LowRes_Top_Body 1
+    2300350: LowRes_Top_Lid
+    3300000: LowRes_Aimer
+    3300002: LowRes_Attach_4
+    3300004: LowRes_Back 1
+    3300006: LowRes_Back 2
+    3300008: LowRes_Back 3
+    3300010: LowRes_Back_Bottom
+    3300012: LowRes_Back_Top
+    3300014: LowRes_Base
+    3300016: LowRes_Base 1
+    3300018: LowRes_Body
+    3300020: LowRes_Body 1
+    3300022: LowRes_Bolt_01
+    3300024: LowRes_Bolt_02
+    3300026: LowRes_Bolt_1
+    3300028: LowRes_Bolt_1 1
+    3300030: LowRes_Bolt_2
+    3300032: LowRes_Bolt_2 1
+    3300034: LowRes_Bottom
+    3300036: LowRes_Bottom 1
+    3300038: LowRes_Bottom 2
+    3300040: LowRes_Button
+    3300042: LowRes_Button 1
+    3300044: LowRes_Center
+    3300046: LowRes_Center 1
+    3300048: LowRes_Center 2
+    3300050: LowRes_Connect
+    3300052: LowRes_Connect 1
+    3300054: LowRes_Cover
+    3300056: LowRes_Cover 1
+    3300058: LowRes_Face
+    3300060: LowRes_Face 1
+    3300062: LowRes_Front 2
+    3300064: LowRes_Front 3
+    3300066: LowRes_Front 4
+    3300068: LowRes_Front_Bottom
+    3300070: LowRes_Front_Cover
+    3300072: LowRes_Front_Top
+    3300074: LowRes_Gattling_Gun
+    3300076: LowRes_Gattling_Gun 1
+    3300078: LowRes_Handle_01
+    3300080: LowRes_Handle_02
+    3300082: LowRes_Handle_03
+    3300084: LowRes_Handle_04
+    3300086: LowRes_Holes
+    3300088: LowRes_Holes 1
+    3300090: LowRes_Inner_Plate
+    3300092: LowRes_Inner_Plate 1
+    3300094: LowRes_Knot_01
+    3300096: LowRes_Knot_02
+    3300098: LowRes_Laser
+    3300100: LowRes_Lower_Body
+    3300102: LowRes_Lower_Body 1
+    3300104: LowRes_Main 2
+    3300106: LowRes_Main 3
+    3300108: LowRes_Main 4
+    3300110: LowRes_Main 5
+    3300112: LowRes_Main_Base
+    3300114: LowRes_Main_Inner_1
+    3300116: LowRes_Main_Inner_1 1
+    3300118: LowRes_Main_Inner_2
+    3300120: LowRes_Main_Inner_2 1
+    3300122: LowRes_Main_Inner_3
+    3300124: LowRes_Main_Inner_3 1
+    3300126: LowRes_Mid
+    3300128: LowRes_Panel_01
+    3300130: LowRes_Panel_02
+    3300132: LowRes_Panels
+    3300134: LowRes_Part_1
+    3300136: LowRes_Part_1 1
+    3300138: LowRes_Part_10
+    3300140: LowRes_Part_10 1
+    3300142: LowRes_Part_11
+    3300144: LowRes_Part_11 1
+    3300146: LowRes_Part_12
+    3300148: LowRes_Part_12 1
+    3300150: LowRes_Part_13
+    3300152: LowRes_Part_13 1
+    3300154: LowRes_Part_14
+    3300156: LowRes_Part_14 1
+    3300158: LowRes_Part_15
+    3300160: LowRes_Part_15 1
+    3300162: LowRes_Part_16
+    3300164: LowRes_Part_16 1
+    3300166: LowRes_Part_17
+    3300168: LowRes_Part_17 1
+    3300170: LowRes_Part_2
+    3300172: LowRes_Part_2 1
+    3300174: LowRes_Part_3
+    3300176: LowRes_Part_3 1
+    3300178: LowRes_Part_4
+    3300180: LowRes_Part_4 1
+    3300182: LowRes_Part_5
+    3300184: LowRes_Part_5 1
+    3300186: LowRes_Part_6
+    3300188: LowRes_Part_6 1
+    3300190: LowRes_Part_7
+    3300192: LowRes_Part_7 1
+    3300194: LowRes_Part_8
+    3300196: LowRes_Part_8 1
+    3300198: LowRes_Part_9
+    3300200: LowRes_Part_9 1
+    3300202: LowRes_pCube2
+    3300204: LowRes_pCube2 1
+    3300206: LowRes_pCylinder29
+    3300208: LowRes_pCylinder29 1
+    3300210: LowRes_Pew_01
+    3300212: LowRes_Pew_02
+    3300214: LowRes_Pew_03
+    3300216: LowRes_Pole_1
+    3300218: LowRes_Pole_1 1
+    3300220: LowRes_Pole_2
+    3300222: LowRes_Pole_2 1
+    3300224: LowRes_polySurface101
+    3300226: LowRes_polySurface101 1
+    3300228: LowRes_polySurface103
+    3300230: LowRes_polySurface103 1
+    3300232: LowRes_polySurface105
+    3300234: LowRes_polySurface105 1
+    3300236: LowRes_polySurface106
+    3300238: LowRes_polySurface106 1
+    3300240: LowRes_polySurface107
+    3300242: LowRes_polySurface107 1
+    3300244: LowRes_polySurface114
+    3300246: LowRes_polySurface114 1
+    3300248: LowRes_polySurface120
+    3300250: LowRes_polySurface120 1
+    3300252: LowRes_polySurface121
+    3300254: LowRes_polySurface121 1
+    3300256: LowRes_polySurface122
+    3300258: LowRes_polySurface122 1
+    3300260: LowRes_polySurface123
+    3300262: LowRes_polySurface123 1
+    3300264: LowRes_polySurface418
+    3300266: LowRes_polySurface418 1
+    3300268: LowRes_polySurface99
+    3300270: LowRes_polySurface99 1
+    3300272: LowRes_Refil_01
+    3300274: LowRes_Refil_01 1
+    3300276: LowRes_Rim
+    3300278: LowRes_Ring
+    3300280: LowRes_Ring_1
+    3300282: LowRes_Ring_1 1
+    3300284: LowRes_Ring_2
+    3300286: LowRes_Ring_2 1
+    3300288: LowRes_Ring_3
+    3300290: LowRes_Ring_3 1
+    3300292: LowRes_Ring_4
+    3300294: LowRes_Ring_4 1
+    3300296: LowRes_Ring_5
+    3300298: LowRes_Ring_5 1
+    3300300: LowRes_Side
+    3300302: LowRes_Side 1
+    3300304: LowRes_Side_01 1
+    3300306: LowRes_Side_03
+    3300308: LowRes_Side_Bottom1
+    3300310: LowRes_Side_Bottom2
+    3300312: LowRes_Side_Inner
+    3300314: LowRes_Side_Inner 1
+    3300316: LowRes_Side_Insert_01
+    3300318: LowRes_Side_Insert_02
+    3300320: LowRes_Side_Panel_01
+    3300322: LowRes_Side_Panel_02
+    3300324: LowRes_Side_Rim
+    3300326: LowRes_Side_Top
+    3300328: LowRes_Side_Top1
+    3300330: LowRes_Sides
+    3300332: LowRes_Sides 1
+    3300334: LowRes_Sphere
+    3300336: LowRes_Stand
+    3300338: LowRes_Stripe
+    3300340: LowRes_Stripe 1
+    3300342: LowRes_Teeth
+    3300344: LowRes_Tip
+    3300346: LowRes_Top_Body
+    3300348: LowRes_Top_Body 1
+    3300350: LowRes_Top_Lid
+    4300000: LowRes_Side_Rim
+    4300002: LowRes_Bottom
+    4300004: LowRes_Sides
+    4300006: LowRes_Panel_01
+    4300008: LowRes_Panel_02
+    4300010: LowRes_Front_Cover
+    4300012: LowRes_Sphere
+    4300014: LowRes_Laser
+    4300016: LowRes_Rim
+    4300018: LowRes_Attach_4
+    4300020: LowRes_Side_Top
+    4300022: LowRes_Side_Panel_01
+    4300024: LowRes_Side_Insert_01
+    4300026: LowRes_Side_Panel_02
+    4300028: LowRes_Side_Insert_02
+    4300030: LowRes_Side_Top1
+    4300032: LowRes_Side_Bottom1
+    4300034: LowRes_Side_Bottom2
+    4300036: LowRes_Back_Bottom
+    4300038: LowRes_Back_Top
+    4300040: LowRes_Front_Bottom
+    4300042: LowRes_Front_Top
+    4300044: LowRes_Handle_04
+    4300046: LowRes_Handle_03
+    4300048: LowRes_Handle_01
+    4300050: LowRes_Top_Lid
+    4300052: LowRes_Body
+    4300054: LowRes_Teeth
+    4300056: LowRes_Bottom
+    4300058: LowRes_Mid
+    4300060: LowRes_Side_01
+    4300062: LowRes_Bolt_01
+    4300064: LowRes_Knot_01
+    4300066: LowRes_Bolt_02
+    4300068: LowRes_Handle_02
+    4300070: LowRes_Knot_02
+    4300072: LowRes_Side_03
+    4300074: LowRes_Top_Body
+    4300076: LowRes_Lower_Body
+    4300078: LowRes_Front
+    4300080: LowRes_Part_1
+    4300082: LowRes_Part_2
+    4300084: LowRes_Back
+    4300086: LowRes_Inner_Plate
+    4300088: LowRes_Top_Body
+    4300090: LowRes_Lower_Body
+    4300092: LowRes_Front
+    4300094: LowRes_Part_1
+    4300096: LowRes_Part_2
+    4300098: LowRes_Back
+    4300100: LowRes_Inner_Plate
+    4300102: LowRes_Connect
+    4300104: LowRes_Center
+    4300106: LowRes_Base
+    4300108: LowRes_Pole_1
+    4300110: LowRes_Pole_2
+    4300112: LowRes_Ring_1
+    4300114: LowRes_Ring_2
+    4300116: LowRes_Ring_3
+    4300118: LowRes_Ring_4
+    4300120: LowRes_Ring_5
+    4300122: LowRes_Connect
+    4300124: LowRes_Center
+    4300126: LowRes_Base
+    4300128: LowRes_Pole_1
+    4300130: LowRes_Pole_2
+    4300132: LowRes_Ring_1
+    4300134: LowRes_Ring_2
+    4300136: LowRes_Ring_3
+    4300138: LowRes_Ring_4
+    4300140: LowRes_Ring_5
+    4300142: LowRes_Tip
+    4300144: LowRes_Stand
+    4300146: LowRes_Aimer
+    4300148: LowRes_Body
+    4300150: LowRes_Center
+    4300152: LowRes_Front
+    4300154: LowRes_Back
+    4300156: LowRes_Ring
+    4300158: LowRes_Main_Base
+    4300160: LowRes_Panels
+    4300162: LowRes_Bottom
+    4300164: LowRes_Sides
+    4300166: LowRes_Pew_01
+    4300168: LowRes_Pew_02
+    4300170: LowRes_Pew_03
+    4300172: LowRes_Stripe
+    4300174: LowRes_Cover
+    4300176: LowRes_Main
+    4300178: LowRes_Gattling_Gun
+    4300180: LowRes_Main
+    4300182: LowRes_Face
+    4300184: LowRes_Holes
+    4300186: LowRes_Side
+    4300188: LowRes_Button
+    4300190: LowRes_Refil_01
+    4300192: LowRes_pCylinder29
+    4300194: LowRes_pCube2
+    4300196: LowRes_polySurface99
+    4300198: LowRes_polySurface114
+    4300200: LowRes_polySurface120
+    4300202: LowRes_polySurface121
+    4300204: LowRes_polySurface123
+    4300206: LowRes_polySurface122
+    4300208: LowRes_polySurface418
+    4300210: LowRes_polySurface106
+    4300212: LowRes_polySurface103
+    4300214: LowRes_polySurface101
+    4300216: LowRes_polySurface107
+    4300218: LowRes_polySurface105
+    4300220: LowRes_Stripe
+    4300222: LowRes_Cover
+    4300224: LowRes_Main
+    4300226: LowRes_Gattling_Gun
+    4300228: LowRes_Main
+    4300230: LowRes_Face
+    4300232: LowRes_Holes
+    4300234: LowRes_Side
+    4300236: LowRes_Button
+    4300238: LowRes_Refil_01
+    4300240: LowRes_pCylinder29
+    4300242: LowRes_pCube2
+    4300244: LowRes_polySurface99
+    4300246: LowRes_polySurface114
+    4300248: LowRes_polySurface120
+    4300250: LowRes_polySurface121
+    4300252: LowRes_polySurface123
+    4300254: LowRes_polySurface122
+    4300256: LowRes_polySurface418
+    4300258: LowRes_polySurface106
+    4300260: LowRes_polySurface103
+    4300262: LowRes_polySurface101
+    4300264: LowRes_polySurface107
+    4300266: LowRes_polySurface105
+    4300268: LowRes_Side_Inner
+    4300270: LowRes_Main_Inner_1
+    4300272: LowRes_Main_Inner_2
+    4300274: LowRes_Main_Inner_3
+    4300276: LowRes_Bolt_1
+    4300278: LowRes_Bolt_2
+    4300280: LowRes_Part_3
+    4300282: LowRes_Part_4
+    4300284: LowRes_Part_5
+    4300286: LowRes_Part_6
+    4300288: LowRes_Part_7
+    4300290: LowRes_Part_8
+    4300292: LowRes_Part_9
+    4300294: LowRes_Part_10
+    4300296: LowRes_Part_11
+    4300298: LowRes_Part_12
+    4300300: LowRes_Part_13
+    4300302: LowRes_Part_14
+    4300304: LowRes_Part_15
+    4300306: LowRes_Part_16
+    4300308: LowRes_Part_17
+    4300310: LowRes_Side_Inner
+    4300312: LowRes_Main_Inner_1
+    4300314: LowRes_Main_Inner_2
+    4300316: LowRes_Main_Inner_3
+    4300318: LowRes_Bolt_1
+    4300320: LowRes_Bolt_2
+    4300322: LowRes_Part_3
+    4300324: LowRes_Part_4
+    4300326: LowRes_Part_5
+    4300328: LowRes_Part_6
+    4300330: LowRes_Part_7
+    4300332: LowRes_Part_8
+    4300334: LowRes_Part_9
+    4300336: LowRes_Part_10
+    4300338: LowRes_Part_11
+    4300340: LowRes_Part_12
+    4300342: LowRes_Part_13
+    4300344: LowRes_Part_14
+    4300346: LowRes_Part_15
+    4300348: LowRes_Part_16
+    4300350: LowRes_Part_17
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boss_Map_01
+    second: {fileID: 2100000, guid: 1f22923f10814412fa77796534e6b2de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boss_Map_02
+    second: {fileID: 2100000, guid: 9f27a96e0032a4e658a12c368e303f07, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
