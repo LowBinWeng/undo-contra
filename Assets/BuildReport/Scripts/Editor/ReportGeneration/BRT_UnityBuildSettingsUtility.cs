@@ -383,8 +383,8 @@ public static class UnityBuildSettingsUtility
 		settings.WebPlayerDefaultScreenWidth = PlayerSettings.defaultWebScreenWidth;
 		settings.WebPlayerDefaultScreenHeight = PlayerSettings.defaultWebScreenHeight;
 
-		settings.WebPlayerEnableStreaming = EditorUserBuildSettings.webPlayerStreamed;
-		settings.WebPlayerDeployOffline = EditorUserBuildSettings.webPlayerOfflineDeployment;
+//		settings.WebPlayerEnableStreaming = EditorUserBuildSettings.webPlayerStreamed;
+//		settings.WebPlayerDeployOffline = EditorUserBuildSettings.webPlayerOfflineDeployment;
 
 #if UNITY_5_2_AND_LESSER
 		settings.WebPlayerFirstStreamedLevelWithResources = PlayerSettings.firstStreamedLevelWithResources;
