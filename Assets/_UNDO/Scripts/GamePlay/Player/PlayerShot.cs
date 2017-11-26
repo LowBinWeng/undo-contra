@@ -4,9 +4,7 @@ using UnityEngine;
 using PathologicalGames;
 
 public class PlayerShot : Attack {
-
-
-
+	
 	public override void OnEnable() {
 		base.OnEnable();
 	}

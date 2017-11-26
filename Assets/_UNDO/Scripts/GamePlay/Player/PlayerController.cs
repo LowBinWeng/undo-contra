@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 1f;
 	public float walkSpeed = 1f;
 	public float jumpForce = 10f;
+	public float dashForce = 10f;
+	float netDashforce = 0f;
+	public float dashDuration = 0.4f;
+	float dashTime = 0f;
+	public float dashCooldownDuration = 1f;
+	float dashCooldownTime = 0f;
 	public float gravity = 10f;
 
 	float netSpeed = 0f;
@@ -22,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 
 	bool isAttacking = false;
 	bool isJumping = false;
+	bool isDashing = false;
 
 	[Header("CrossHair")]
 	public Transform crossHair;
@@ -46,6 +53,9 @@ public class PlayerController : MonoBehaviour {
 		Cursor.visible = false;
 	}
 
+	void OnEnable () {
+	}
+
 	// Update is called once per frame
 	void Update () {
 		ControlMovement ();
@@ -56,7 +66,41 @@ public class PlayerController : MonoBehaviour {
 
 	void ControlMovement() {
 
-		velocity.x = Input.GetAxis ("Horizontal");
+		if ( !isDashing ) {
+			velocity.x = Input.GetAxis ("Horizontal");
+		}
+
+		if ( Input.GetButtonDown("Dash") && (velocity.x != 0f) && !isDashing && dashCooldownTime == 0f) {
+			isDashing = true;
+			netDashforce = dashForce;
+			dashTime = 0f;
+
+			if 		( velocity.x < 0f ) {
+				anim.Play("DodgeLeft");
+				velocity.x -= dashForce;
+			}
+			else if ( velocity.x > 0f ) {
+				anim.Play("DodgeRight");
+				velocity.x += dashForce;
+			}
+
+		}
+
+		if ( isDashing ) {
+			if ( dashTime < dashDuration ) dashTime += Time.deltaTime;
+			else { 
+				// End Dash
+				dashTime = dashDuration;
+				dashCooldownTime = dashCooldownDuration;
+				isDashing = false;
+			}
+
+			netDashforce = Mathf.Lerp( netDashforce, 0f, dashTime / dashDuration );
+		}
+
+		if ( dashCooldownTime > 0f ) dashCooldownTime -= Time.deltaTime;
+		else dashCooldownTime = 0f;
+
 
 		if ( Input.GetButtonDown( "Jump" ) && isJumping == false ) {
 			anim.Play("Jump");
@@ -65,7 +109,8 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if ( isJumping ) {
-			velocity.x *= 2.5f;
+			if 	( !isDashing ) velocity.x *= 1.0f;
+			else velocity.x *= 1.15f;
 
 			if 		( !isAttacking ) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 10f );
 			else if ( isAttacking ) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 2.5f );
@@ -81,6 +126,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		anim.SetBool( "IsJumping", isJumping );
+		anim.SetBool( "IsDashing", isDashing );
 		anim.SetFloat( "Direction", velocity.x );
 		anim.SetFloat( "Speed", Mathf.Abs(velocity.x) );
 
@@ -92,7 +138,7 @@ public class PlayerController : MonoBehaviour {
 		if ( Mathf.Abs(velocity.x) > 0f ) {
 			anim.SetLayerWeight(1,0f); // Cancel Aiming
 			// Run
-			if ( !isAttacking ) {
+			if ( !isAttacking && !isDashing ) {
 				
 				netSpeed = moveSpeed;
 
@@ -104,8 +150,13 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 			// Walk / Attacking
-			else{
+			else if ( !isDashing ) {
 				ControlAim();
+			}
+			// Dashing defaults
+			else {
+				anim.SetLayerWeight(1,0f);
+				girl.rotation = Quaternion.identity;
 			}
 		}
 		else if (isAttacking) {
