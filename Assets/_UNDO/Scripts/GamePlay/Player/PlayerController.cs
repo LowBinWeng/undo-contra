@@ -5,6 +5,8 @@ using PathologicalGames;
 public class PlayerController : MonoBehaviour {
 
 	[Header("Character")]
+	public Vector2 minBounds;
+	public Vector2 maxBounds;
 	public float moveSpeed = 1f;
 	public float walkSpeed = 1f;
 	public float jumpForce = 10f;
@@ -37,8 +39,7 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("CrossHair")]
 	public Transform crossHair;
-	public Vector2 minBounds;
-	public Vector2 maxBounds;
+
 	public float aimSpeed = 1f;
 	Vector3 aimVelocity = Vector3.zero;
 	Vector3 lastMousePos = Vector3.zero;
@@ -51,10 +52,21 @@ public class PlayerController : MonoBehaviour {
 
 	Vector3 velocity = Vector3.zero;
 
+	private static PlayerController _instance;
+	public static PlayerController Instance {
+		get {
+			return _instance;
+		}
+	}
+
 	[Header("Aiming")]
 	public Transform origin;
 
 	void Awake() {
+
+		if ( _instance == null ) _instance = this;
+		else if ( _instance != this ) Destroy( this );
+
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
@@ -138,8 +150,17 @@ public class PlayerController : MonoBehaviour {
 		anim.SetFloat( "Speed", Mathf.Abs(velocity.x) );
 
 
+		if ( this.transform.position.x <= minBounds.x && velocity.x < 0f) velocity.x = 0f; 
+		if ( this.transform.position.x >= maxBounds.x && velocity.x > 0f ) velocity.x = 0f; 
+//		if ( this.transform.position.y <= minBounds.y && velocity.y < 0f ) velocity.y = 0f; 
+//		if ( this.transform.position.y >= maxBounds.y && velocity.y > 0f ) velocity.y = 0f; 
+
 		transform.Translate (velocity * netSpeed * Time.deltaTime);
 
+		if ( this.transform.position.x < minBounds.x ) this.transform.position = new Vector3( minBounds.x, transform.position.y, transform.position.z );
+		if ( this.transform.position.x > maxBounds.x ) this.transform.position = new Vector3( maxBounds.x, transform.position.y, transform.position.z );
+//		if ( this.transform.position.y < minBounds.y ) this.transform.position = new Vector3( transform.position.x, minBounds.y, transform.position.z );
+//		if ( this.transform.position.y > maxBounds.y ) this.transform.position = new Vector3( transform.position.x, maxBounds.y, transform.position.z );
 
 		// Rotation Control
 		if ( Mathf.Abs(velocity.x) > 0f ) {
@@ -247,7 +268,6 @@ public class PlayerController : MonoBehaviour {
 				// Hit detection
 				RaycastHit hit;
 				if ( Physics.Raycast( spawnPoint.position, (t.position - spawnPoint.position)*200f, out hit ) ) {
-					Debug.Log("Hit stuff " + hit.collider.name);
 					if ( hit.collider.CompareTag("Enemy")) hit.collider.GetComponent<Character>().TakeHit(1, hit.point );
 				}
 			}

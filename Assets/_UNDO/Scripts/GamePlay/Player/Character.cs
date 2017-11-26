@@ -13,7 +13,7 @@ public class Character : MonoBehaviour {
 	public virtual void TakeHit( int damage, Vector3 point ) {
 	
 		curHp -= Mathf.Clamp (damage, 0, 100000);
-		hpRenderer.UpdateHPRenderer ((float)curHp / (float)maxHp);
+		if ( hpRenderer ) hpRenderer.UpdateHPRenderer ((float)curHp / (float)maxHp);
 
 		if ( this.transform.CompareTag("Player")) ScreenFlashManager.Instance.FlashRed();
 	}
@@ -46,6 +46,10 @@ public class Character : MonoBehaviour {
 
 		StopCoroutine("FlashRoutine");
 
+	}
+
+	public virtual void Death() {
+		
 	}
 
 }

@@ -196,6 +196,8 @@ public class Boss : Enemy {
 
 		}
 
+		yield return new WaitForSeconds( 2f);
+
 		EndAIRoutine();
 	}
 
