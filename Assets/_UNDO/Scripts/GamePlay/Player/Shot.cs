@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathologicalGames;
 
-public class PlayerShot : Attack {
+public class Shot : Attack {
 	
 	public override void OnEnable() {
 		base.OnEnable();

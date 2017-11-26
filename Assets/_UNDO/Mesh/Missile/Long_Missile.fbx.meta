@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: c5d3f4b0dbf40436c9fdfc25afb82946
+timeCreated: 1511679978
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Inner
+    100002: //RootNode
+    100004: Long_missile
+    100006: Main_Body
+    100008: Rims_1
+    100010: Rims_2
+    100012: Rims_3
+    100014: Rocket
+    100016: Sharp
+    100018: Torn_01
+    100020: Torn_02
+    100022: Torn_03
+    100024: Torn_04
+    100026: Torn_05
+    100028: Torn_06
+    400000: Inner
+    400002: //RootNode
+    400004: Long_missile
+    400006: Main_Body
+    400008: Rims_1
+    400010: Rims_2
+    400012: Rims_3
+    400014: Rocket
+    400016: Sharp
+    400018: Torn_01
+    400020: Torn_02
+    400022: Torn_03
+    400024: Torn_04
+    400026: Torn_05
+    400028: Torn_06
+    2300000: Inner
+    2300002: Main_Body
+    2300004: Rims_1
+    2300006: Rims_2
+    2300008: Rims_3
+    2300010: Rocket
+    2300012: Torn_01
+    2300014: Torn_02
+    2300016: Torn_03
+    2300018: Torn_04
+    2300020: Torn_05
+    2300022: Torn_06
+    3300000: Inner
+    3300002: Main_Body
+    3300004: Rims_1
+    3300006: Rims_2
+    3300008: Rims_3
+    3300010: Rocket
+    3300012: Torn_01
+    3300014: Torn_02
+    3300016: Torn_03
+    3300018: Torn_04
+    3300020: Torn_05
+    3300022: Torn_06
+    4300000: Main_Body
+    4300002: Rims_1
+    4300004: Rims_2
+    4300006: Rims_3
+    4300008: Inner
+    4300010: Rocket
+    4300012: Torn_01
+    4300014: Torn_02
+    4300016: Torn_03
+    4300018: Torn_04
+    4300020: Torn_05
+    4300022: Torn_06
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Long_Missile
+    second: {fileID: 2100000, guid: 993e213cc82f54b12b7bc4b86ba712e7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

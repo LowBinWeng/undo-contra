@@ -15,6 +15,7 @@ public class Character : MonoBehaviour {
 		curHp -= Mathf.Clamp (damage, 0, 100000);
 		hpRenderer.UpdateHPRenderer ((float)curHp / (float)maxHp);
 
+		if ( this.transform.CompareTag("Player")) ScreenFlashManager.Instance.FlashRed();
 	}
 
 	public void FlashCharacter() {

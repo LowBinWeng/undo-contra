@@ -46,8 +46,8 @@ public class ScreenFlashManager : MonoBehaviour {
 	IEnumerator FadeOutFlash() {
 		while ( true ) {
 
-			whiteFlash.color 	= Color.Lerp ( whiteFlash.color, transparentWhite, Time.deltaTime * 1F );
-			redFlash.color 		= Color.Lerp ( redFlash.color, transparentRed, Time.deltaTime * 1F );
+			whiteFlash.color 	= Color.Lerp ( whiteFlash.color, transparentWhite, Time.deltaTime * 10F );
+			redFlash.color 		= Color.Lerp ( redFlash.color, transparentRed, Time.deltaTime * 10F );
 
 			yield return null;
 		}
