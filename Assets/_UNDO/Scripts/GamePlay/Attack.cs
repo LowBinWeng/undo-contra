@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PathologicalGames;
-public class Attack : MonoBehaviour {
+public class Attack : Damageable {
 
 	public float speed = 10f;
 	public float lifeTime = 2f;
-	public string targetTag = "Enemy";
-	public int damage = 5;
+	public Transform despawnEffect;
 
 	bool initialized = false;
 	
@@ -20,16 +19,12 @@ public class Attack : MonoBehaviour {
 		}
 	}
 
-	public virtual void OnCollisionEnter(Collision other) {
-		if (other.collider != null) {
-			if ( other.collider.CompareTag(targetTag)) {
-				other.transform.GetComponent<Character> ().TakeHit (damage, other.contacts[0].point);
-				Despawn();
-			}
-		}
+	public override void OnCollisionEnter(Collision other) {
+		base.OnCollisionEnter( other );
 	}
 
-	protected void Despawn() {
+	public override void Despawn() {
+		if ( despawnEffect ) PoolManager.Pools["Attacks"].Spawn( despawnEffect, this.transform.position, Quaternion.identity );
 		PoolManager.Pools["Attacks"].Despawn(this.transform );
 	}
 }

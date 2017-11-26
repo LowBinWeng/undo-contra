@@ -14,6 +14,7 @@ public class UndoZai : Enemy {
 	public float moveSpeed = 1f;
 	public float attackAnimationTime = 1f;
 	public SkinnedMeshRenderer rend;
+	public Transform despawnEffect;
 
 	// Use this for initialization
 	void OnEnable () {
@@ -61,6 +62,8 @@ public class UndoZai : Enemy {
 		this.transform.LookAt( PlayerController.Instance.center );
 		Transform t = PoolManager.Pools["Attacks"].Spawn( enemyShot, attackSpawnPoints[attackPoint].position, attackSpawnPoints[attackPoint].rotation );
 		t.LookAt( PlayerController.Instance.center );
+
+		PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", attackSpawnPoints[attackPoint].position, attackSpawnPoints[attackPoint].rotation ); 
 	}
 
 	public override void TakeHit( int damage, Vector3 point ) {
@@ -75,6 +78,7 @@ public class UndoZai : Enemy {
 	}
 
 	public override void Death() {
+		if ( despawnEffect ) PoolManager.Pools["Attacks"].Spawn(despawnEffect, this.transform.position, Quaternion.identity );
 		UndoZaiSpawner.Instance.Despawn( this.transform );
 	}
 

@@ -270,6 +270,9 @@ public class PlayerController : MonoBehaviour {
 				if ( Physics.Raycast( spawnPoint.position, (t.position - spawnPoint.position)*200f, out hit ) ) {
 					if ( hit.collider.CompareTag("Enemy")) hit.collider.GetComponent<Character>().TakeHit(1, hit.point );
 				}
+
+				// Effect
+				Transform e = PoolManager.Pools["Attacks"].Spawn("LaserMuzzle", spawnPoint.position, spawnPoint.rotation );
 			}
 
 		}

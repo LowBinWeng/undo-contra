@@ -31,6 +31,8 @@ public class HomingRocket : Attack {
 		}
 
 		this.transform.Translate (Vector3.forward * Time.deltaTime * speed, Space.Self);
+
+		if ( this.transform.position.y < 0f ) Despawn();
 	}
 
 	public override void OnCollisionEnter(Collision other ) {

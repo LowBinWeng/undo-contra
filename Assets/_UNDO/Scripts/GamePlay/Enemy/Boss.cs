@@ -156,6 +156,9 @@ public class Boss : Enemy {
 			t1.Rotate( new Vector3 (Random.Range(-shotSpread,shotSpread),Random.Range(-shotSpread,shotSpread),0f) );
 			t2.Rotate( new Vector3 (Random.Range(-shotSpread,shotSpread),Random.Range(-shotSpread,shotSpread),0f) );
 
+			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", attackSpawnPoints[0].position, attackSpawnPoints[0].rotation );
+			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", attackSpawnPoints[1].position, attackSpawnPoints[1].rotation );
+
 			yield return new WaitForSeconds( shotInterval );
 
 			this.transform.LookAt( target.center );
@@ -189,6 +192,7 @@ public class Boss : Enemy {
 		for ( int i = 0; i < rocketSpawnPoints.Length; i++ ) {
 			Transform t = PoolManager.Pools["Attacks"].Spawn( homingRocket, rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
 			t.GetComponent<HomingRocket>().StartHoming( target.root );
+			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
 
 			yield return new WaitForSeconds( rocketShotInterval );
 
