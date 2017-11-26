@@ -8,7 +8,7 @@ public class Character : MonoBehaviour {
 	public int curHp;
 	public HealthRenderer hpRenderer;
 	public Renderer[] _renderers;
-
+	public GameObject[] _flashers;
 
 	public virtual void TakeHit( int damage, Vector3 point ) {
 	
@@ -29,11 +29,19 @@ public class Character : MonoBehaviour {
 			_renderers[i].materials[0].SetColor ("_EmissionColor", Color.white);
 		}  
 
-		yield return new WaitForSeconds(0.1f);
+		for ( int i = 0; i < _flashers.Length;i++ ) {
+			_flashers[i].SetActive(true);
+		}
+
+		yield return new WaitForSeconds(0.02f);
 
 		for ( int i =0; i< _renderers.Length; i++ ) {
 			_renderers[i].materials[0].SetColor ("_EmissionColor", Color.black);
 		}  
+
+		for ( int i = 0; i < _flashers.Length;i++ ) {
+			_flashers[i].SetActive(false);
+		}
 
 		StopCoroutine("FlashRoutine");
 

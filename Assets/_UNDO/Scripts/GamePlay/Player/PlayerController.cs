@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnEnable () {
+		lastMousePos = new Vector2 ( Screen.width/2f, Screen.height/2f );
 	}
 
 	// Update is called once per frame

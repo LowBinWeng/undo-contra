@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 06f1789d386c4488c99f18bf9bab9fc1
+timeCreated: 1511661372
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Back_Pack
+    100002: Back_Pack01
+    100004: BB_JOINT
+    100006: BB_MESH
+    100008: //RootNode
+    100010: Front_Chest
+    100012: joint1
+    100014: joint2
+    100016: L_Arm
+    100018: L_Arm01
+    100020: L_Arm02
+    100022: L_Arm03
+    100024: L_Leg
+    100026: L_Leg01
+    100028: L_Leg02
+    100030: L_Leg03
+    100032: L_Leg_B01
+    100034: L_Leg_B02
+    100036: L_Leg_B03
+    100038: L_Leg_B04
+    100040: L_Wing
+    100042: L_Wing01
+    100044: L_Wing02
+    100046: orto_blocking_12:LowRes_Bolt_4
+    100048: orto_blocking_12:LowRes_Front_Cover
+    100050: orto_blocking_12:LowRes_Gattling_Gun1
+    100052: orto_blocking_12:LowRes_Inner_Plate
+    100054: orto_blocking_12:LowRes_Laser
+    100056: orto_blocking_12:LowRes_Part_3
+    100058: orto_blocking_12:LowRes_Pew_03
+    100060: orto_blocking_12:LowRes_polySurface101
+    100062: orto_blocking_12:LowRes_Ring_8
+    100064: orto_blocking_12:LowRes_Side_Bottom2
+    100066: orto_blocking_12:LowRes_Top_Body
+    100068: orto_blocking_12:LowRes_Top_Lid
+    100070: R_Arm
+    100072: R_Arm01
+    100074: R_Arm02
+    100076: R_Arm03
+    100078: R_Reg
+    100080: R_Reg01
+    100082: R_Reg02
+    100084: R_Reg03
+    100086: R_Reg_B01
+    100088: R_Reg_B02
+    100090: R_Reg_B03
+    100092: R_Reg_B04
+    100094: R_Wing
+    100096: R_Wing01
+    100098: R_Wing02
+    100100: Root
+    100102: Top_CPit
+    400000: Back_Pack
+    400002: Back_Pack01
+    400004: BB_JOINT
+    400006: BB_MESH
+    400008: //RootNode
+    400010: Front_Chest
+    400012: joint1
+    400014: joint2
+    400016: L_Arm
+    400018: L_Arm01
+    400020: L_Arm02
+    400022: L_Arm03
+    400024: L_Leg
+    400026: L_Leg01
+    400028: L_Leg02
+    400030: L_Leg03
+    400032: L_Leg_B01
+    400034: L_Leg_B02
+    400036: L_Leg_B03
+    400038: L_Leg_B04
+    400040: L_Wing
+    400042: L_Wing01
+    400044: L_Wing02
+    400046: orto_blocking_12:LowRes_Bolt_4
+    400048: orto_blocking_12:LowRes_Front_Cover
+    400050: orto_blocking_12:LowRes_Gattling_Gun1
+    400052: orto_blocking_12:LowRes_Inner_Plate
+    400054: orto_blocking_12:LowRes_Laser
+    400056: orto_blocking_12:LowRes_Part_3
+    400058: orto_blocking_12:LowRes_Pew_03
+    400060: orto_blocking_12:LowRes_polySurface101
+    400062: orto_blocking_12:LowRes_Ring_8
+    400064: orto_blocking_12:LowRes_Side_Bottom2
+    400066: orto_blocking_12:LowRes_Top_Body
+    400068: orto_blocking_12:LowRes_Top_Lid
+    400070: R_Arm
+    400072: R_Arm01
+    400074: R_Arm02
+    400076: R_Arm03
+    400078: R_Reg
+    400080: R_Reg01
+    400082: R_Reg02
+    400084: R_Reg03
+    400086: R_Reg_B01
+    400088: R_Reg_B02
+    400090: R_Reg_B03
+    400092: R_Reg_B04
+    400094: R_Wing
+    400096: R_Wing01
+    400098: R_Wing02
+    400100: Root
+    400102: Top_CPit
+    4300000: orto_blocking_12:LowRes_Top_Body
+    4300002: orto_blocking_12:LowRes_Inner_Plate
+    4300004: orto_blocking_12:LowRes_Front_Cover
+    4300006: orto_blocking_12:LowRes_Top_Lid
+    4300008: orto_blocking_12:LowRes_Laser
+    4300010: orto_blocking_12:LowRes_polySurface101
+    4300012: orto_blocking_12:LowRes_Gattling_Gun1
+    4300014: orto_blocking_12:LowRes_Pew_03
+    4300016: orto_blocking_12:LowRes_Ring_8
+    4300018: orto_blocking_12:LowRes_Part_3
+    4300020: orto_blocking_12:LowRes_Bolt_4
+    4300022: orto_blocking_12:LowRes_Side_Bottom2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: orto_blocking_12:LowRes_Bolt_4
+    13700002: orto_blocking_12:LowRes_Front_Cover
+    13700004: orto_blocking_12:LowRes_Gattling_Gun1
+    13700006: orto_blocking_12:LowRes_Inner_Plate
+    13700008: orto_blocking_12:LowRes_Laser
+    13700010: orto_blocking_12:LowRes_Part_3
+    13700012: orto_blocking_12:LowRes_Pew_03
+    13700014: orto_blocking_12:LowRes_polySurface101
+    13700016: orto_blocking_12:LowRes_Ring_8
+    13700018: orto_blocking_12:LowRes_Side_Bottom2
+    13700020: orto_blocking_12:LowRes_Top_Body
+    13700022: orto_blocking_12:LowRes_Top_Lid
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orto_blocking_12_Boss_Map_01
+    second: {fileID: 2100000, guid: 2d718920d167947e68a721f845ba0c4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orto_blocking_12_Boss_Map_02
+    second: {fileID: 2100000, guid: bcefa2c16593c4113bb0f2c0cc38b7e0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

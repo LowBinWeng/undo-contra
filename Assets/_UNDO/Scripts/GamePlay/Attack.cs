@@ -23,6 +23,7 @@ public class Attack : MonoBehaviour {
 		if (other.collider != null) {
 			if ( other.collider.CompareTag(targetTag)) {
 				other.transform.GetComponent<Character> ().TakeHit (1, other.contacts[0].point);
+				Despawn();
 			}
 		}
 	}
