@@ -20,7 +20,10 @@ public class PlayerController : MonoBehaviour {
 	public Animator anim;
 	public Transform spawnPoint;
 	public GameObject bulletPrefab;
+	public LayerMask targetMask;
 	public float cooldownDuration = 0.1f;
+	public float windupDuration = 0.1f;
+	float windupTime = 0f;
 	float cooldownTime = 0f;
 	public Transform girl;
 	public Transform root;
@@ -44,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]float maxX = 20f;
 	[SerializeField]float minY = -20f;
 	[SerializeField]float maxY = 20f;
+	public float shotSpread = 1f;
 
 	Vector3 velocity = Vector3.zero;
 
@@ -188,6 +192,11 @@ public class PlayerController : MonoBehaviour {
 		if ( crossHair.position.x <= minX && aimVelocity.x < 0f ) aimVelocity.x = 0f; // Min X
 		if ( crossHair.position.x >= maxX && aimVelocity.x > 0f ) aimVelocity.x = 0f; // Max X
 
+		if ( crossHair.position.x < minX ) crossHair.position = new Vector3 ( minX, crossHair.position.y, crossHair.position.z );
+		if ( crossHair.position.x > maxX ) crossHair.position = new Vector3 ( maxX, crossHair.position.y, crossHair.position.z );
+		if ( crossHair.position.y < minY ) crossHair.position = new Vector3 ( crossHair.position.x, minY , crossHair.position.z );
+		if ( crossHair.position.y > maxY ) crossHair.position = new Vector3 ( crossHair.position.x, maxY , crossHair.position.z );
+
 		crossHair.Translate (aimVelocity * Time.deltaTime * aimSpeed);
 		lastMousePos = Input.mousePosition;
 	}
@@ -210,13 +219,39 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void ControlAttack() {
+
+		if (Input.GetMouseButtonDown (0) ) {
+			windupTime = windupDuration;
+		}
+
 		if (Input.GetMouseButton (0) ) {
+
 			isAttacking = true;
-			if ( cooldownTime <= 0f) {
+
+			if ( windupTime > 0f ) {
+				windupTime -= Time.deltaTime;
+			}
+			else if ( cooldownTime <= 0f) {
 				Transform t = PoolManager.Pools ["Attacks"].Spawn (bulletPrefab, spawnPoint.position, spawnPoint.rotation);
 				t.LookAt (crossHair);
+				Vector3 shotDirection = Vector3.forward;
+				shotDirection.x = Random.Range(-shotSpread,shotSpread);
+				shotDirection.y = Random.Range(-shotSpread,shotSpread);
+				t.Translate( shotDirection  * 20f );
+				LineRenderer lr = t.GetComponent<LineRenderer>();
+				lr.SetPosition(0, spawnPoint.position );
+				lr.SetPosition(1, t.position );
+
 				cooldownTime = cooldownDuration;
+
+				// Hit detection
+				RaycastHit hit;
+				if ( Physics.Raycast( spawnPoint.position, (t.position - spawnPoint.position)*200f, out hit ) ) {
+					Debug.Log("Hit stuff " + hit.collider.name);
+					if ( hit.collider.CompareTag("Enemy")) hit.collider.GetComponent<Character>().TakeHit(1, hit.point );
+				}
 			}
+
 		}
 		else {
 			isAttacking = false;
