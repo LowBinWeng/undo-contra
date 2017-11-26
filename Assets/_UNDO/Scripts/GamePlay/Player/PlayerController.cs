@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 	public float cooldownDuration = 0.1f;
 	float cooldownTime = 0f;
 	public Transform girl;
+	public Transform root;
+	public Transform center;
 	public Transform leftRotReference;
 	public Transform rightRotReference;
 
