@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{4d670dd3-8606-48ce-a29b-c1c09d7cee2a}">
+        <property name="assetPath">
+            <value>Bass_Drop_13.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>5.5054999999999996</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{06dbb116-1648-4912-892a-3c1a4062ca6a}</destination>
+        </relationship>
+    </object>
+</objects>

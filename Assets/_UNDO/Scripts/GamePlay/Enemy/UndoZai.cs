@@ -37,6 +37,7 @@ public class UndoZai : Enemy {
 			yield return null;
 		}
 
+		StartCoroutine(LookAtRoutine());
 		anim.Play("Idle");
 		yield return new WaitForSeconds( 1.5f);
 
@@ -58,8 +59,7 @@ public class UndoZai : Enemy {
 
 
  	public void Attack(int attackPoint) {
-
-		this.transform.LookAt( PlayerController.Instance.center );
+		
 		Transform t = PoolManager.Pools["Attacks"].Spawn( enemyShot, attackSpawnPoints[attackPoint].position, attackSpawnPoints[attackPoint].rotation );
 		t.LookAt( PlayerController.Instance.center );
 
@@ -77,9 +77,17 @@ public class UndoZai : Enemy {
 		if ( this.transform.CompareTag("Player")) ScreenFlashManager.Instance.FlashRed();
 	}
 
+	IEnumerator LookAtRoutine() {
+		while ( true ) {
+			yield return null;
+			this.transform.LookAt( PlayerController.Instance.center );
+		}
+	}
+
 	public override void Death() {
 		if ( despawnEffect ) PoolManager.Pools["Attacks"].Spawn(despawnEffect, this.transform.position, Quaternion.identity );
 		UndoZaiSpawner.Instance.Despawn( this.transform );
 	}
+
 
 }

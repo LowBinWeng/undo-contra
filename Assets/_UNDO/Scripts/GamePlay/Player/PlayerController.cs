@@ -273,6 +273,8 @@ public class PlayerController : MonoBehaviour {
 
 				// Effect
 				Transform e = PoolManager.Pools["Attacks"].Spawn("LaserMuzzle", spawnPoint.position, spawnPoint.rotation );
+
+				AudioManager.Instance.Play( "event:/LaserShot", this.center.position );
 			}
 
 		}
@@ -285,5 +287,11 @@ public class PlayerController : MonoBehaviour {
 
 	void CountCooldown() {
 		if (cooldownTime > 0f) cooldownTime -= Time.deltaTime;
+	}
+
+	public void Death() {
+
+		root.gameObject.SetActive(false);
+		this.enabled = false;
 	}
 }

@@ -21,6 +21,10 @@ public class HealthRenderer : MonoBehaviour {
 
 		if ( hpFillBar.fillAmount == actualMin ) {
 			GameOverManager.Instance.ShowGameOver();
+
+			if ( character == HealthBarOwner.PLAYER ) {
+				PlayerController.Instance.Death();
+			}
 		}
 	}
 }

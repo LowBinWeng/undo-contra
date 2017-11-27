@@ -7,9 +7,9 @@ public class Boss : Enemy {
 
 	[Header("Data")]
 	public PlayerController target;
-	public enum BossBehaviour {Idle, Shuffle, Shoot, Rocket}
-	public BossBehaviour bossBehaviour = BossBehaviour.Idle;
-	BossBehaviour lastBossBehaviour = BossBehaviour.Idle;
+	public enum BossBehaviour {Shuffle, Shoot, Rocket, QuickRocket}
+	public BossBehaviour bossBehaviour = BossBehaviour.Shuffle;
+	BossBehaviour lastBossBehaviour = BossBehaviour.Shuffle;
 
 	[Header("Awareness")]
 	public float closeDistance = 10f;
@@ -31,7 +31,7 @@ public class Boss : Enemy {
 	public float shotInterval = 0.2f;
 	public float shotSpread = 0.2f;
 
-	[Header("Rocket Swarm")]
+	[Header("Rocket Swarm & QuickRockets")]
 	public Transform[] rocketSpawnPoints;
 	public Transform homingRocket;
 	public float rocketShotInterval = 0.2f;
@@ -60,10 +60,11 @@ public class Boss : Enemy {
 			case TargetDistance.Close :
 			
 				switch ( bossBehaviour ) {
-				case BossBehaviour.Idle: StartIdle(); break;
+//				case BossBehaviour.Idle: StartIdle(); break;
 				case BossBehaviour.Shuffle: StartShuffle(); break;
 				case BossBehaviour.Shoot: StartShoot(); break;
 				case BossBehaviour.Rocket: StartRocketSwarm(); break;
+				case BossBehaviour.QuickRocket: StartQuickRocket(); break;
 				}
 
 			break;
@@ -72,10 +73,11 @@ public class Boss : Enemy {
 			case TargetDistance.Far :
 			
 				switch ( bossBehaviour ) {
-				case BossBehaviour.Idle: StartIdle(); break;
+//				case BossBehaviour.Idle: StartIdle(); break;
 				case BossBehaviour.Shuffle: StartShuffle(); break;
 				case BossBehaviour.Shoot: StartShoot(); break;
 				case BossBehaviour.Rocket: StartRocketSwarm(); break;
+				case BossBehaviour.QuickRocket: StartQuickRocket(); break;
 				}
 
 			break;
@@ -130,6 +132,8 @@ public class Boss : Enemy {
 			}
 		}
 
+		yield return new WaitForSeconds( 1f);
+
 		EndAIRoutine();
 
 	}
@@ -143,6 +147,8 @@ public class Boss : Enemy {
 	}
 
 	IEnumerator ShootRoutine() {
+
+		yield return new WaitForSeconds( 2f );
 
 		this.transform.LookAt( target.center );
 
@@ -159,11 +165,15 @@ public class Boss : Enemy {
 			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", attackSpawnPoints[0].position, attackSpawnPoints[0].rotation );
 			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", attackSpawnPoints[1].position, attackSpawnPoints[1].rotation );
 
+			AudioManager.Instance.Play("event:/BossShot",this.transform.position );
+
 			yield return new WaitForSeconds( shotInterval );
 
 			this.transform.LookAt( target.center );
 
 		}
+
+		yield return new WaitForSeconds( 4f);
 
 		EndAIRoutine();
 	}
@@ -193,8 +203,36 @@ public class Boss : Enemy {
 			Transform t = PoolManager.Pools["Attacks"].Spawn( homingRocket, rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
 			t.GetComponent<HomingRocket>().StartHoming( target.root );
 			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
-
+			AudioManager.Instance.Play("event:/Launch",this.transform.position );
 			yield return new WaitForSeconds( rocketShotInterval );
+
+			this.transform.LookAt( target.center );
+
+		}
+
+		yield return new WaitForSeconds( 4f);
+
+		EndAIRoutine();
+	}
+
+	/* ==============================================================================================================
+	 * Quick Rocket
+	 * ============================================================================================================ */
+
+	void StartQuickRocket() {
+		StartCoroutine( QuickRocketRoutine());
+	}
+
+	IEnumerator QuickRocketRoutine() {
+
+		this.transform.LookAt( target.center );
+
+		for ( int i = 0; i < 4; i++ ) {
+			Transform t = PoolManager.Pools["Attacks"].Spawn( homingRocket, rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
+			t.GetComponent<HomingRocket>().StartHoming( target.root );
+			PoolManager.Pools["Attacks"].Spawn("RedShotMuzzle", rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
+			AudioManager.Instance.Play("event:/Launch",this.transform.position );
+			yield return new WaitForSeconds( rocketShotInterval/2f );
 
 			this.transform.LookAt( target.center );
 
