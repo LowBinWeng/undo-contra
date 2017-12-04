@@ -18,13 +18,5 @@ public class HealthRenderer : MonoBehaviour {
 
 		float actualValue = actualMin + (( actualMax - actualMin) / (1f-0f)) * ( hpPercentage - 0f);
 		hpFillBar.fillAmount = actualValue;
-
-		if ( hpFillBar.fillAmount == actualMin ) {
-			GameOverManager.Instance.ShowGameOver();
-
-			if ( character == HealthBarOwner.PLAYER ) {
-				PlayerController.Instance.Death();
-			}
-		}
 	}
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{040f138d-b155-4127-a71d-bc6107444638}">
+        <property name="assetPath">
+            <value>UL_FS_Electric_Short_Whoosh.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.9377500000000001</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{06dbb116-1648-4912-892a-3c1a4062ca6a}</destination>
+        </relationship>
+    </object>
+</objects>

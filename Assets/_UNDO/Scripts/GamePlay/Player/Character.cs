@@ -9,13 +9,21 @@ public class Character : MonoBehaviour {
 	public HealthRenderer hpRenderer;
 	public Renderer[] _renderers;
 	public GameObject[] _flashers;
+	protected bool _isDead = false;
+	public bool isDead {get{return _isDead;}}
 
 	public virtual void TakeHit( int damage, Vector3 point ) {
 	
-		curHp -= Mathf.Clamp (damage, 0, 100000);
-		if ( hpRenderer ) hpRenderer.UpdateHPRenderer ((float)curHp / (float)maxHp);
+		if ( isDead == false ) {
 
-		if ( this.transform.CompareTag("Player")) ScreenFlashManager.Instance.FlashRed();
+			curHp -= Mathf.Clamp (damage, 0, 100000);
+			if ( hpRenderer ) hpRenderer.UpdateHPRenderer ((float)curHp / (float)maxHp);
+
+			if ( this.transform.CompareTag("Player")) ScreenFlashManager.Instance.FlashRed();
+
+			if ( curHp <= 0f ) this.Death();
+
+		}
 	}
 
 	public void FlashCharacter() {

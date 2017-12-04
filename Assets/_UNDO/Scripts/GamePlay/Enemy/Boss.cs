@@ -6,6 +6,7 @@ using PathologicalGames;
 public class Boss : Enemy {
 
 	[Header("Data")]
+	public Animator anim;
 	public PlayerController target;
 	public enum BossBehaviour {Shuffle, Shoot, Rocket, QuickRocket}
 	public BossBehaviour bossBehaviour = BossBehaviour.Shuffle;
@@ -51,7 +52,8 @@ public class Boss : Enemy {
 
 		// Set new boss behaviour
 		do { bossBehaviour = (BossBehaviour) Random.Range(0,System.Enum.GetValues(typeof(BossBehaviour)).Length); }
-		while ( lastBossBehaviour == bossBehaviour );
+		while ( lastBossBehaviour == bossBehaviour || (this.curHp > maxHp/2 && bossBehaviour == BossBehaviour.Rocket ));
+//		while ( lastBossBehaviour == bossBehaviour );
 
 		lastBossBehaviour = bossBehaviour;
 
@@ -115,6 +117,8 @@ public class Boss : Enemy {
 		do { _shufflePointIndex = Random.Range(0,shufflingPoints.Length); }
 		while ( _shufflePointIndex == lastShufflePointIndex );
 
+		AudioManager.Instance.Play("event:/BossShuffle",this.transform.position);
+
 		while ( _shuffleCount > 0 ) {
 
 			this.transform.position = Vector3.MoveTowards( this.transform.position, shufflingPoints[_shufflePointIndex].position, Time.deltaTime * shuffleSpeed );
@@ -127,6 +131,8 @@ public class Boss : Enemy {
 				do { _shufflePointIndex = Random.Range(0,shufflingPoints.Length); }
 				while ( _shufflePointIndex == lastShufflePointIndex );
 				_shuffleCount--;
+
+				if ( _shuffleCount > 0 ) AudioManager.Instance.Play("event:/BossShuffle",this.transform.position);
 
 				yield return new WaitForSeconds( shuffleDelay );
 			}
@@ -197,7 +203,9 @@ public class Boss : Enemy {
 		}
 
 		this.transform.LookAt( target.center );
-		yield return new WaitForSeconds( 1.3f);
+		this.anim.Play("Ultimate");
+
+		yield return new WaitForSeconds( 2.8f);
 
 		for ( int i = 0; i < rocketSpawnPoints.Length; i++ ) {
 			Transform t = PoolManager.Pools["Attacks"].Spawn( homingRocket, rocketSpawnPoints[i].position, rocketSpawnPoints[i].rotation );
@@ -224,6 +232,8 @@ public class Boss : Enemy {
 	}
 
 	IEnumerator QuickRocketRoutine() {
+
+		yield return new WaitForSeconds( 0.5f);
 
 		this.transform.LookAt( target.center );
 

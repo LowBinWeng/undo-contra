@@ -4,12 +4,15 @@ using UnityEngine;
 using PathologicalGames;
 public class PlayerController : MonoBehaviour {
 
+	[SerializeField]protected UndoGirl undoGirl;
+
 	[Header("Character")]
 	public Vector2 minBounds;
 	public Vector2 maxBounds;
 	public float moveSpeed = 1f;
 	public float walkSpeed = 1f;
 	public float jumpForce = 10f;
+	public float jumpLateralSpeedMultiply = 3f;
 	public float dashForce = 10f;
 	float netDashforce = 0f;
 	public float dashDuration = 0.4f;
@@ -38,7 +41,9 @@ public class PlayerController : MonoBehaviour {
 	bool isDashing = false;
 
 	[Header("CrossHair")]
-	public Transform crossHair;
+	public Transform aiming3D;
+	public RectTransform crossHairUI;
+
 
 	public float aimSpeed = 1f;
 	Vector3 aimVelocity = Vector3.zero;
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]float minY = -20f;
 	[SerializeField]float maxY = 20f;
 	public float shotSpread = 1f;
+	bool attackLock = false;
 
 	Vector3 velocity = Vector3.zero;
 
@@ -67,20 +73,51 @@ public class PlayerController : MonoBehaviour {
 		if ( _instance == null ) _instance = this;
 		else if ( _instance != this ) Destroy( this );
 
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		SetCursor(false);
 	}
 
 	void OnEnable () {
 		lastMousePos = new Vector2 ( Screen.width/2f, Screen.height/2f );
 	}
 
+	void SetCursor ( bool active ) {
+		if ( active == false ) {
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		}
+		else {
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
-		ControlMovement ();
-		ControlCrossHair ();
-		ControlAttack ();
-		CountCooldown ();
+		if ( undoGirl.isDead == false ) {
+			ControlMovement ();
+			ControlCrossHair ();
+			ControlAttack ();
+			CountCooldown ();
+		}
+		else {
+			if ( isJumping ) {
+				if ( this.transform.position.y < 0f ) {
+					Vector3 resetPos = this.transform.position;
+					resetPos.y = 0f;
+					this.transform.position = resetPos;
+
+					velocity.y = 0f;
+					isJumping = false;
+				}
+				else {
+					velocity.x = 0f;
+					velocity.y = -gravity;
+					transform.Translate (velocity * netSpeed * Time.deltaTime);
+				}
+			}
+		}
+
+
 	}
 
 	void ControlMovement() {
@@ -89,10 +126,11 @@ public class PlayerController : MonoBehaviour {
 			velocity.x = Input.GetAxis ("Horizontal");
 		}
 
-		if ( Input.GetButtonDown("Dash") && (velocity.x != 0f) && !isDashing && dashCooldownTime == 0f) {
+		if ( Input.GetButtonDown("Dash") && (velocity.x != 0f) && !isDashing && dashCooldownTime == 0f ) {
 			isDashing = true;
 			netDashforce = dashForce;
 			dashTime = 0f;
+			attackLock = true;
 
 			if 		( velocity.x < 0f ) {
 				anim.Play("DodgeLeft");
@@ -103,6 +141,7 @@ public class PlayerController : MonoBehaviour {
 				velocity.x += dashForce;
 			}
 
+			AudioManager.Instance.Play("event:/Dash",this.transform.position );
 		}
 
 		if ( isDashing ) {
@@ -112,6 +151,7 @@ public class PlayerController : MonoBehaviour {
 				dashTime = dashDuration;
 				dashCooldownTime = dashCooldownDuration;
 				isDashing = false;
+				attackLock = false;
 			}
 
 			netDashforce = Mathf.Lerp( netDashforce, 0f, dashTime / dashDuration );
@@ -125,11 +165,12 @@ public class PlayerController : MonoBehaviour {
 			anim.Play("Jump");
 			isJumping = true;
 			velocity.y = jumpForce;
+
 		}
 
 		if ( isJumping ) {
-			if 	( !isDashing ) velocity.x *= 1.0f;
-			else velocity.x *= 1.15f;
+			if 	( !isDashing ) velocity.x *= jumpLateralSpeedMultiply;
+			else velocity.x *= 1.0f;
 
 			if 		( !isAttacking ) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 10f );
 			else if ( isAttacking ) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 2.5f );
@@ -208,18 +249,21 @@ public class PlayerController : MonoBehaviour {
 		aimVelocity.x = Input.GetAxis ("Mouse X");
 		aimVelocity.y = Input.GetAxis ("Mouse Y");
 
-		if ( crossHair.position.y <= minY && aimVelocity.y < 0f ) aimVelocity.y = 0f; // Min Y
-		if ( crossHair.position.y >= maxY && aimVelocity.y > 0f ) aimVelocity.y = 0f; // Max Y
-		if ( crossHair.position.x <= minX && aimVelocity.x < 0f ) aimVelocity.x = 0f; // Min X
-		if ( crossHair.position.x >= maxX && aimVelocity.x > 0f ) aimVelocity.x = 0f; // Max X
+		if ( aiming3D.position.y <= minY && aimVelocity.y < 0f ) aimVelocity.y = 0f; // Min Y
+		if ( aiming3D.position.y >= maxY && aimVelocity.y > 0f ) aimVelocity.y = 0f; // Max Y
+		if ( aiming3D.position.x <= minX && aimVelocity.x < 0f ) aimVelocity.x = 0f; // Min X
+		if ( aiming3D.position.x >= maxX && aimVelocity.x > 0f ) aimVelocity.x = 0f; // Max X
 
-		if ( crossHair.position.x < minX ) crossHair.position = new Vector3 ( minX, crossHair.position.y, crossHair.position.z );
-		if ( crossHair.position.x > maxX ) crossHair.position = new Vector3 ( maxX, crossHair.position.y, crossHair.position.z );
-		if ( crossHair.position.y < minY ) crossHair.position = new Vector3 ( crossHair.position.x, minY , crossHair.position.z );
-		if ( crossHair.position.y > maxY ) crossHair.position = new Vector3 ( crossHair.position.x, maxY , crossHair.position.z );
+		if ( aiming3D.position.x < minX ) aiming3D.position = new Vector3 ( minX, aiming3D.position.y, aiming3D.position.z );
+		if ( aiming3D.position.x > maxX ) aiming3D.position = new Vector3 ( maxX, aiming3D.position.y, aiming3D.position.z );
+		if ( aiming3D.position.y < minY ) aiming3D.position = new Vector3 ( aiming3D.position.x, minY , aiming3D.position.z );
+		if ( aiming3D.position.y > maxY ) aiming3D.position = new Vector3 ( aiming3D.position.x, maxY , aiming3D.position.z );
 
-		crossHair.Translate (aimVelocity * Time.deltaTime * aimSpeed);
+		aiming3D.Translate (aimVelocity * Time.deltaTime * aimSpeed);
 		lastMousePos = Input.mousePosition;
+
+		if ( undoGirl.isDead == false ) crossHairUI.position = Vector3.MoveTowards( crossHairUI.position, Camera.main.WorldToScreenPoint( aiming3D.position), Time.deltaTime * 120f );
+
 	}
 
 
@@ -229,7 +273,7 @@ public class PlayerController : MonoBehaviour {
 		anim.SetLayerWeight(1,1f);
 		netSpeed = walkSpeed;
 
-		Vector3 offset = crossHair.position - origin.position;
+		Vector3 offset = aiming3D.position - origin.position;
 		offset.Normalize();
 
 		anim.SetFloat("VerticalAim",offset.y);
@@ -241,11 +285,15 @@ public class PlayerController : MonoBehaviour {
 
 	void ControlAttack() {
 
-		if (Input.GetMouseButtonDown (0) ) {
+		if (Input.GetMouseButtonUp(0)) {
+			attackLock = false;
+		}
+
+		if (Input.GetMouseButtonDown (0) && attackLock == false ) {
 			windupTime = windupDuration;
 		}
 
-		if (Input.GetMouseButton (0) ) {
+		if (Input.GetMouseButton (0) && attackLock == false ) {
 
 			isAttacking = true;
 
@@ -254,7 +302,7 @@ public class PlayerController : MonoBehaviour {
 			}
 			else if ( cooldownTime <= 0f) {
 				Transform t = PoolManager.Pools ["Attacks"].Spawn (bulletPrefab, spawnPoint.position, spawnPoint.rotation);
-				t.LookAt (crossHair);
+				t.LookAt (aiming3D);
 				Vector3 shotDirection = Vector3.forward;
 				shotDirection.x = Random.Range(-shotSpread,shotSpread);
 				shotDirection.y = Random.Range(-shotSpread,shotSpread);
@@ -289,9 +337,4 @@ public class PlayerController : MonoBehaviour {
 		if (cooldownTime > 0f) cooldownTime -= Time.deltaTime;
 	}
 
-	public void Death() {
-
-		root.gameObject.SetActive(false);
-		this.enabled = false;
-	}
 }

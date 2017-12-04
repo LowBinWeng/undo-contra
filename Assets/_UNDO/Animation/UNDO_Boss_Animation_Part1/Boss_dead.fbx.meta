@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: e25c2c96276c5436d968e7c729c2f031
+timeCreated: 1512122583
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Back_Pack
+    100002: Back_Pack01
+    100004: BB_JOINT
+    100006: //RootNode
+    100008: Ctrl_Bpack
+    100010: Ctrl_Chest
+    100012: Ctrl_CPit
+    100014: CTRL_GRP
+    100016: Ctrl_L_arm
+    100018: Ctrl_L_Leg
+    100020: Ctrl_L_Leg 1
+    100022: Ctrl_L_Leg2
+    100024: Ctrl_L_Leg2 1
+    100026: Ctrl_L_Leg2_grp
+    100028: Ctrl_L_Leg_grp
+    100030: Ctrl_L_M01
+    100032: Ctrl_L_M01 1
+    100034: Ctrl_L_M02
+    100036: Ctrl_L_M02 1
+    100038: Ctrl_L_M03
+    100040: Ctrl_L_M03 1
+    100042: Ctrl_L_M04
+    100044: Ctrl_L_M04 1
+    100046: Ctrl_L_M_grp
+    100048: Ctrl_R_arm
+    100050: Ctrl_R_Leg2_grp
+    100052: Ctrl_R_Leg_grp
+    100054: Ctrl_R_M_grp
+    100056: Ctrl_Root
+    100058: Front_Chest
+    100060: joint1
+    100062: joint2
+    100064: L_Arm
+    100066: L_Arm01
+    100068: L_Arm02
+    100070: L_Arm03
+    100072: L_Leg
+    100074: L_Leg01
+    100076: L_Leg02
+    100078: L_Leg03
+    100080: L_Leg_B01
+    100082: L_Leg_B02
+    100084: L_Leg_B03
+    100086: L_Leg_B04
+    100088: L_Wing
+    100090: L_Wing01
+    100092: L_Wing02
+    100094: R_Arm
+    100096: R_Arm01
+    100098: R_Arm02
+    100100: R_Arm03
+    100102: R_Reg
+    100104: R_Reg01
+    100106: R_Reg02
+    100108: R_Reg03
+    100110: R_Reg_B01
+    100112: R_Reg_B02
+    100114: R_Reg_B03
+    100116: R_Reg_B04
+    100118: R_Wing
+    100120: R_Wing01
+    100122: R_Wing02
+    100124: Root
+    100126: Top_CPit
+    400000: Back_Pack
+    400002: Back_Pack01
+    400004: BB_JOINT
+    400006: //RootNode
+    400008: Ctrl_Bpack
+    400010: Ctrl_Chest
+    400012: Ctrl_CPit
+    400014: CTRL_GRP
+    400016: Ctrl_L_arm
+    400018: Ctrl_L_Leg
+    400020: Ctrl_L_Leg 1
+    400022: Ctrl_L_Leg2
+    400024: Ctrl_L_Leg2 1
+    400026: Ctrl_L_Leg2_grp
+    400028: Ctrl_L_Leg_grp
+    400030: Ctrl_L_M01
+    400032: Ctrl_L_M01 1
+    400034: Ctrl_L_M02
+    400036: Ctrl_L_M02 1
+    400038: Ctrl_L_M03
+    400040: Ctrl_L_M03 1
+    400042: Ctrl_L_M04
+    400044: Ctrl_L_M04 1
+    400046: Ctrl_L_M_grp
+    400048: Ctrl_R_arm
+    400050: Ctrl_R_Leg2_grp
+    400052: Ctrl_R_Leg_grp
+    400054: Ctrl_R_M_grp
+    400056: Ctrl_Root
+    400058: Front_Chest
+    400060: joint1
+    400062: joint2
+    400064: L_Arm
+    400066: L_Arm01
+    400068: L_Arm02
+    400070: L_Arm03
+    400072: L_Leg
+    400074: L_Leg01
+    400076: L_Leg02
+    400078: L_Leg03
+    400080: L_Leg_B01
+    400082: L_Leg_B02
+    400084: L_Leg_B03
+    400086: L_Leg_B04
+    400088: L_Wing
+    400090: L_Wing01
+    400092: L_Wing02
+    400094: R_Arm
+    400096: R_Arm01
+    400098: R_Arm02
+    400100: R_Arm03
+    400102: R_Reg
+    400104: R_Reg01
+    400106: R_Reg02
+    400108: R_Reg03
+    400110: R_Reg_B01
+    400112: R_Reg_B02
+    400114: R_Reg_B03
+    400116: R_Reg_B04
+    400118: R_Wing
+    400120: R_Wing01
+    400122: R_Wing02
+    400124: Root
+    400126: Top_CPit
+    7400000: BossDeath
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BossDeath
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

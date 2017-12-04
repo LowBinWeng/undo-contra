@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{3cc45e1c-5fdf-4e35-b66f-84f7daec2d02}">
+        <property name="assetPath">
+            <value>BGM/Menu.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>165.59020408163266</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{06dbb116-1648-4912-892a-3c1a4062ca6a}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 97b07a4fd25df734d8b1f887dcf3d841
+timeCreated: 1512401959
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: Square
@@ -10,6 +12,7 @@ TextureImporter:
     21300010: Star10
     21300012: SoftDiamond
     21300014: Diamond
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -63,6 +66,7 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -71,6 +75,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -79,6 +84,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: iPhone
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -87,6 +93,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: Android
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -95,6 +102,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: WebGL
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -212,7 +220,7 @@ TextureImporter:
         height: 240
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 120, y: 0, z: 117, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1

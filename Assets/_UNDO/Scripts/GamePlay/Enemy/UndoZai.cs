@@ -30,7 +30,7 @@ public class UndoZai : Enemy {
 		yield return new WaitForSeconds(1.0f);
 
 		anim.Play("Run");
-		while( this.transform.position.z > 4f ) {
+		while( this.transform.position.z > 1f ) {
 
 			this.transform.Translate( Vector3.forward * Time.deltaTime * moveSpeed );
 
@@ -67,6 +67,8 @@ public class UndoZai : Enemy {
 	}
 
 	public override void TakeHit( int damage, Vector3 point ) {
+
+		FlashCharacter();
 
 		curHp -= Mathf.Clamp (damage, 0, 100000);
 
