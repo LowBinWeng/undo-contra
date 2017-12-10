@@ -16,16 +16,19 @@ public class TitleManager : MonoBehaviour {
 	public GameObject root;
 	public GameObject startButton;
 	public GameObject resumeButton;
+	public GameObject menuButton;
 
 	void Start() {
 		if ( SceneManager.GetActiveScene().name == "Title" ) {
 			startButton.SetActive(true);
 			resumeButton.SetActive(false);
+			menuButton.SetActive(false);
 			root.SetActive(true);
 		}
 		else if ( SceneManager.GetActiveScene().name == "Game" ) {
 			startButton.SetActive(false);
 			resumeButton.SetActive(true);
+			menuButton.SetActive(true);
 			root.SetActive(false);
 		}
 	}
