@@ -24,10 +24,6 @@ public class GameManager : MonoBehaviour {
 		Application.targetFrameRate = frameRate;
 	}
 
-	// Quit Function
-	void Update() {
-		if (Input.GetKeyDown (KeyCode.Escape)) Application.Quit ();
-	}
 
 
 }
