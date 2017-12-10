@@ -270,5 +270,10 @@ public class Boss : Enemy {
 
 	}
 
-
+	public override void Death() {
+		_isDead = true;
+		StopAllCoroutines ();
+		FlashCharacter();
+		CutsceneManager.Instance.PlayCutscene( Cutscene.Victory );
+	}
 }

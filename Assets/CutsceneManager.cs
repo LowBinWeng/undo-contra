@@ -11,6 +11,7 @@ public class CutsceneManager : MonoBehaviour {
 	[SerializeField] PlayableDirector director;
 	[SerializeField] TimelineAsset introTimeline;
 	[SerializeField] TimelineAsset gameOverTimeline;
+	[SerializeField] TimelineAsset victoryTimeline;
 
 
 	private static CutsceneManager _instance;
@@ -31,6 +32,7 @@ public class CutsceneManager : MonoBehaviour {
 		switch( _cutscene ) {
 		case Cutscene.Intro: director.Play( introTimeline, DirectorWrapMode.None ); break;
 		case Cutscene.GameOver: director.Play( gameOverTimeline, DirectorWrapMode.Hold ); break;
+		case Cutscene.Victory: director.Play( victoryTimeline, DirectorWrapMode.Hold ); break;
 		}
 	}
 }
