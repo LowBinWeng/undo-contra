@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PathologicalGames;
+using UnityEngine.UI;
+
 public class PlayerController : MonoBehaviour {
 
 	[SerializeField]protected UndoGirl undoGirl;
@@ -19,6 +21,9 @@ public class PlayerController : MonoBehaviour {
 	float dashTime = 0f;
 	public float dashCooldownDuration = 1f;
 	float dashCooldownTime = 0f;
+	public Image staminaFill;
+	public GameObject staminaFlash; 
+
 	public float gravity = 10f;
 
 	float netSpeed = 0f;
@@ -43,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 	[Header("CrossHair")]
 	public Transform aiming3D;
 	public RectTransform crossHairUI;
-
+	public Animator crossHairAnim;
 
 	public float aimSpeed = 1f;
 	Vector3 aimVelocity = Vector3.zero;
@@ -122,30 +127,30 @@ public class PlayerController : MonoBehaviour {
 
 	void ControlMovement() {
 
-		if ( !isDashing ) {
+		if (!isDashing) {
 			velocity.x = Input.GetAxis ("Horizontal");
 		}
 
-		if ( Input.GetButtonDown("Dash") && (velocity.x != 0f) && !isDashing && dashCooldownTime == 0f ) {
+		if (Input.GetButtonDown ("Dash") && (velocity.x != 0f) && !isDashing && dashCooldownTime == 0f) {
 			isDashing = true;
 			netDashforce = dashForce;
 			dashTime = 0f;
 			attackLock = true;
 
-			if 		( velocity.x < 0f ) {
-				anim.Play("DodgeLeft");
+			if (velocity.x < 0f) {
+				anim.Play ("DodgeLeft");
 				velocity.x -= dashForce;
-			}
-			else if ( velocity.x > 0f ) {
-				anim.Play("DodgeRight");
+			} else if (velocity.x > 0f) {
+				anim.Play ("DodgeRight");
 				velocity.x += dashForce;
 			}
 
-			AudioManager.Instance.Play("event:/Dash",this.transform.position );
+			AudioManager.Instance.Play ("event:/Dash", this.transform.position);
 		}
 
-		if ( isDashing ) {
-			if ( dashTime < dashDuration ) dashTime += Time.deltaTime;
+		if (isDashing) {
+			if (dashTime < dashDuration)
+				dashTime += Time.deltaTime;
 			else { 
 				// End Dash
 				dashTime = dashDuration;
@@ -154,11 +159,19 @@ public class PlayerController : MonoBehaviour {
 				attackLock = false;
 			}
 
-			netDashforce = Mathf.Lerp( netDashforce, 0f, dashTime / dashDuration );
+			netDashforce = Mathf.Lerp (netDashforce, 0f, dashTime / dashDuration);
 		}
 
-		if ( dashCooldownTime > 0f ) dashCooldownTime -= Time.deltaTime;
-		else dashCooldownTime = 0f;
+		if (dashCooldownTime > 0f) {
+			dashCooldownTime -= Time.deltaTime;
+			staminaFill.fillAmount = (dashCooldownDuration - dashCooldownTime) / dashCooldownDuration;
+			staminaFlash.SetActive (false);
+		}
+		else {
+			dashCooldownTime = 0f;
+			staminaFill.fillAmount = 1f;
+			staminaFlash.SetActive (true);
+		}
 
 
 		if ( Input.GetButtonDown( "Jump" ) && isJumping == false ) {
@@ -262,6 +275,9 @@ public class PlayerController : MonoBehaviour {
 		aiming3D.Translate (aimVelocity * Time.deltaTime * aimSpeed);
 		lastMousePos = Input.mousePosition;
 
+		if (isAttacking) crossHairAnim.Play ("Fire");
+		else crossHairAnim.Play ("Idle");
+
 		if ( undoGirl.isDead == false ) crossHairUI.position = Vector3.MoveTowards( crossHairUI.position, Camera.main.WorldToScreenPoint( aiming3D.position), Time.deltaTime * 120f );
 
 	}
@@ -316,7 +332,10 @@ public class PlayerController : MonoBehaviour {
 				// Hit detection
 				RaycastHit hit;
 				if ( Physics.Raycast( spawnPoint.position, (t.position - spawnPoint.position)*200f, out hit ) ) {
-					if ( hit.collider.CompareTag("Enemy")) hit.collider.GetComponent<Character>().TakeHit(1, hit.point );
+					if (hit.collider.CompareTag ("Enemy")) {
+						hit.collider.GetComponent<Character> ().TakeHit (1, hit.point);
+						AudioManager.Instance.Play ("event:/Hit", this.center.position);
+					}
 				}
 
 				// Effect
