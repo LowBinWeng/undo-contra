@@ -6,6 +6,19 @@ public class Damageable : MonoBehaviour {
 
 	public string targetTag = "Enemy";
 	public int damage = 5;
+	public float colliderLifeTime = 0f;
+	public Collider collider;
+
+	void OnEnable() {
+		if (collider) {
+			collider.enabled = true;
+			Invoke ("DisableCollider", colliderLifeTime);
+		}
+	}
+
+	void DisableCollider() {
+		collider.enabled = false;
+	}
 
 	public virtual void OnCollisionEnter(Collision other) {
 		if (other.collider != null) {

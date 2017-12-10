@@ -9,6 +9,7 @@ public enum Cutscene {Intro, Victory, GameOver}
 public class CutsceneManager : MonoBehaviour {
 
 	[SerializeField] PlayableDirector director;
+	[SerializeField] TimelineAsset introTimeline;
 	[SerializeField] TimelineAsset gameOverTimeline;
 
 
@@ -22,8 +23,13 @@ public class CutsceneManager : MonoBehaviour {
 		else if ( _instance != this ) Destroy(this);
 	}
 
+	void OnEnable() {
+		PlayCutscene (Cutscene.Intro);
+	}
+
 	public void PlayCutscene( Cutscene _cutscene ) {
 		switch( _cutscene ) {
+		case Cutscene.Intro: director.Play( introTimeline, DirectorWrapMode.None ); break;
 		case Cutscene.GameOver: director.Play( gameOverTimeline, DirectorWrapMode.Hold ); break;
 		}
 	}

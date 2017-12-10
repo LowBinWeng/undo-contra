@@ -39,7 +39,7 @@ public class Boss : Enemy {
 	public Transform rocketSwarmPosition;
 
 	void OnEnable() {
-		CheckTarget();	
+		Invoke ("CheckTarget", 1.0f);
 	}
 
 	/* ==============================================================================================================
@@ -179,9 +179,12 @@ public class Boss : Enemy {
 
 		}
 
-		yield return new WaitForSeconds( 4f);
+		yield return new WaitForSeconds( 1f);
 
-		EndAIRoutine();
+		StartShuffle ();
+
+		//EndAIRoutine();
+
 	}
 
 	/* ==============================================================================================================
@@ -248,7 +251,7 @@ public class Boss : Enemy {
 
 		}
 
-		yield return new WaitForSeconds( 2f);
+		yield return new WaitForSeconds( 1f);
 
 		EndAIRoutine();
 	}
