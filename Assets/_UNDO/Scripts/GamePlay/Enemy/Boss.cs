@@ -11,6 +11,7 @@ public class Boss : Enemy {
 	public enum BossBehaviour {Shuffle, Shoot, Rocket, QuickRocket}
 	public BossBehaviour bossBehaviour = BossBehaviour.Shuffle;
 	BossBehaviour lastBossBehaviour = BossBehaviour.Shuffle;
+	float aiSpeed = 1f;
 
 	[Header("Awareness")]
 	public float closeDistance = 10f;
@@ -96,7 +97,7 @@ public class Boss : Enemy {
 	}
 
 	IEnumerator IdleRoutine() {
-		yield return new WaitForSeconds( 1f );
+		yield return new WaitForSeconds( 1f / aiSpeed );
 		EndAIRoutine();
 	}
 
@@ -134,11 +135,11 @@ public class Boss : Enemy {
 
 				if ( _shuffleCount > 0 ) AudioManager.Instance.Play("event:/BossShuffle",this.transform.position);
 
-				yield return new WaitForSeconds( shuffleDelay );
+				yield return new WaitForSeconds( shuffleDelay / aiSpeed );
 			}
 		}
 
-		yield return new WaitForSeconds( 1f);
+		yield return new WaitForSeconds( 1f / aiSpeed);
 
 		EndAIRoutine();
 
@@ -154,7 +155,7 @@ public class Boss : Enemy {
 
 	IEnumerator ShootRoutine() {
 
-		yield return new WaitForSeconds( 2f );
+		yield return new WaitForSeconds( 2f / aiSpeed );
 
 		this.transform.LookAt( target.center );
 
@@ -179,7 +180,7 @@ public class Boss : Enemy {
 
 		}
 
-		yield return new WaitForSeconds( 1f);
+		yield return new WaitForSeconds( 1f / aiSpeed);
 
 		StartShuffle ();
 
@@ -199,6 +200,8 @@ public class Boss : Enemy {
 
 		this.transform.LookAt( target.center );
 
+		AudioManager.Instance.Play ("event:/Alert", Vector3.zero);
+
 		while ( this.transform.position != rocketSwarmPosition.position ) {
 
 			this.transform.position = Vector3.MoveTowards( this.transform.position, rocketSwarmPosition.position, Time.deltaTime * shuffleSpeed );
@@ -207,6 +210,7 @@ public class Boss : Enemy {
 
 		this.transform.LookAt( target.center );
 		this.anim.Play("Ultimate");
+		AudioManager.Instance.Play ("event:/SuperCharge", this.transform.position);
 
 		yield return new WaitForSeconds( 2.8f);
 
@@ -221,7 +225,7 @@ public class Boss : Enemy {
 
 		}
 
-		yield return new WaitForSeconds( 4f);
+		yield return new WaitForSeconds( 3f);
 
 		EndAIRoutine();
 	}
@@ -236,7 +240,7 @@ public class Boss : Enemy {
 
 	IEnumerator QuickRocketRoutine() {
 
-		yield return new WaitForSeconds( 0.5f);
+		yield return new WaitForSeconds( 0.5f / aiSpeed);
 
 		this.transform.LookAt( target.center );
 
@@ -251,7 +255,7 @@ public class Boss : Enemy {
 
 		}
 
-		yield return new WaitForSeconds( 1f);
+		yield return new WaitForSeconds( 1f / aiSpeed);
 
 		EndAIRoutine();
 	}
@@ -261,6 +265,7 @@ public class Boss : Enemy {
 	 * ============================================================================================================ */
 
 	void EndAIRoutine() {
+		if (curHp < maxHp / 2f) aiSpeed = 2f;
 		CheckTarget();
 	}
 

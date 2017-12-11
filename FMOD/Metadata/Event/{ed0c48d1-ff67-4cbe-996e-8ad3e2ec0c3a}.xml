@@ -54,7 +54,7 @@
             <destination>{713de5ac-ee5d-4e66-a0e6-dac0036cb49b}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{77e4c613-2f68-4e67-a5df-ae0a014e71b2}</destination>
+            <destination>{d997d8ec-dfdb-447d-97a7-d7a7c1420bec}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{654ead2d-f9d1-4770-adb8-547c972297d3}"/>
@@ -181,7 +181,11 @@
             <destination>{6b2c64f2-7da0-4dfb-907d-e3dc38ba0f6e}</destination>
         </relationship>
     </object>
-    <object class="MixerBusPanner" id="{81e1ba8a-724a-4a85-94d2-df20d763ddb8}"/>
+    <object class="MixerBusPanner" id="{81e1ba8a-724a-4a85-94d2-df20d763ddb8}">
+        <property name="surroundPanExtent">
+            <value>173.333328</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{aa13c9af-a29d-4015-bf15-66d9808810c6}"/>
     <object class="RandomizerModulator" id="{842b43af-2928-4cba-9123-cf067d7228fa}">
         <property name="nameOfPropertyBeingModulated">

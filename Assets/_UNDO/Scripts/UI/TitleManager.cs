@@ -35,7 +35,7 @@ public class TitleManager : MonoBehaviour {
 
 	void Update() {
 		if ( Input.GetKeyDown(KeyCode.Escape ) ) {
-			TogglePause();
+			if ( SceneManager.GetActiveScene().name == "Game" ) TogglePause();
 		}
 	}
 
@@ -51,11 +51,20 @@ public class TitleManager : MonoBehaviour {
 			Cursor.visible = false;
 			Time.timeScale = 1f;
 			root.SetActive(false);
+			AudioManager.Instance.Play ("event:/Confirm", Vector3.zero);
 		}
 	}
 
 	public void Exit() {
+		AudioManager.Instance.Play ("event:/Hover", Vector3.zero);
 		Application.Quit();
 	}
 
+	public void PlayHoverSFX() {
+		AudioManager.Instance.Play ("event:/Hover", Vector3.zero);
+	}
+
+	public void PlayConfirmSFX() {
+		AudioManager.Instance.Play ("event:/Confirm", Vector3.zero);
+	}
 }

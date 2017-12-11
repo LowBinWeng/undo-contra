@@ -19,18 +19,20 @@ public class MenuParallax : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		mousePos = Input.mousePosition;
-		normalizedPos.x = mousePos.x / Screen.width;
-		normalizedPos.y = mousePos.y / Screen.height;
 
-		lerpTime.x = Mathf.MoveTowards( lerpTime.x, normalizedPos.x, RealTime.deltaTime * lerpSpeed);
-		lerpTime.y = Mathf.MoveTowards( lerpTime.y, normalizedPos.y, RealTime.deltaTime * lerpSpeed);
+		if (Screen.fullScreen == false) {
+			mousePos = Input.mousePosition;
+			normalizedPos.x = mousePos.x / Screen.width;
+			normalizedPos.y = mousePos.y / Screen.height;
 
-		newPosition.x = origin.x + Mathf.Lerp( -parallaxLimit.x,parallaxLimit.x, lerpTime.x ); 
-		newPosition.y = origin.y + Mathf.Lerp( -parallaxLimit.y,parallaxLimit.y, lerpTime.y ); 
-		newPosition.z = origin.z;
+			lerpTime.x = Mathf.MoveTowards (lerpTime.x, normalizedPos.x, RealTime.deltaTime * lerpSpeed);
+			lerpTime.y = Mathf.MoveTowards (lerpTime.y, normalizedPos.y, RealTime.deltaTime * lerpSpeed);
 
-		this.transform.position = newPosition;
+			newPosition.x = origin.x + Mathf.Lerp (-parallaxLimit.x, parallaxLimit.x, lerpTime.x); 
+			newPosition.y = origin.y + Mathf.Lerp (-parallaxLimit.y, parallaxLimit.y, lerpTime.y); 
+			newPosition.z = origin.z;
 
+			this.transform.position = newPosition;
+		}
 	}
 }

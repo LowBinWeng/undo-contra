@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if ( Input.GetButtonDown( "Jump" ) && isJumping == false ) {
+		if ( (Input.GetButtonDown( "Jump" ) || Input.GetKeyDown(KeyCode.Space) ) && isJumping == false ) {
 			anim.Play("Jump");
 			isJumping = true;
 			velocity.y = jumpForce;
@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour {
 			else velocity.x *= 1.0f;
 
 			if 		( !isAttacking ) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 10f );
-			else if ( isAttacking ) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 2.5f );
+			else if ( isAttacking) velocity.y = Mathf.MoveTowards( velocity.y, -gravity, Time.deltaTime * 2.5f );
 
 			if ( this.transform.position.y < 0f ) {
 				Vector3 resetPos = this.transform.position;
@@ -246,6 +246,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		// Stationary
 		else {
+			netSpeed = moveSpeed;
 			anim.SetLayerWeight(1,0f);
 			girl.rotation = Quaternion.identity;
 		}
@@ -335,6 +336,7 @@ public class PlayerController : MonoBehaviour {
 					if (hit.collider.CompareTag ("Enemy")) {
 						hit.collider.GetComponent<Character> ().TakeHit (1, hit.point);
 						AudioManager.Instance.Play ("event:/Hit", this.center.position);
+						PoolManager.Pools["Attacks"].Spawn("HitEffect", hit.point, Quaternion.identity);
 					}
 				}
 

@@ -1,7 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class StartButton : MonoBehaviour {
+using UnityEngine.EventSystems;
+
+public class StartButton : ButtonBehaviour, IPointerEnterHandler, IPointerDownHandler {
+
+	public override void OnPointerEnter( PointerEventData eventData ) {
+		base.OnPointerEnter (eventData);
+	}
+
+	public override void OnPointerDown( PointerEventData eventData ) {
+		base.OnPointerDown(eventData);
+	}
 
 	public void StartGame() {
 

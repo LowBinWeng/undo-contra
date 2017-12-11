@@ -53,7 +53,7 @@
             <destination>{9140826e-ef40-453a-af4a-f10b24b0b071}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{77e4c613-2f68-4e67-a5df-ae0a014e71b2}</destination>
+            <destination>{d997d8ec-dfdb-447d-97a7-d7a7c1420bec}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{cf34bf80-a81a-4a37-9365-d8c39a263ff8}"/>
@@ -148,10 +148,10 @@
     </object>
     <object class="MixerBusPanner" id="{72ddccac-c12b-42b2-a808-ded565ee00a1}">
         <property name="surroundPanDirection">
-            <value>-58.2405205</value>
+            <value>2.13721704</value>
         </property>
         <property name="surroundPanExtent">
-            <value>118.656044</value>
+            <value>98.4287567</value>
         </property>
     </object>
     <object class="MixerBusFader" id="{6ee77fff-a413-4a94-bc47-0151da9c0b29}"/>
@@ -202,7 +202,14 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{47f8caf0-e5f8-465c-9d72-6a2d9747359a}"/>
-    <object class="SpatialiserEffect" id="{95d08ab2-ba27-4468-b38d-ed155c3fac82}"/>
+    <object class="SpatialiserEffect" id="{95d08ab2-ba27-4468-b38d-ed155c3fac82}">
+        <property name="distanceRolloffType">
+            <value>4</value>
+        </property>
+        <property name="maximumDistance">
+            <value>550</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{36509e1a-63fb-4143-ad59-5f6407eda842}"/>
     <object class="PitchShifterEffect" id="{6d6bc34e-a603-49bd-b06e-3ece5659ba57}">
         <property name="pitch">

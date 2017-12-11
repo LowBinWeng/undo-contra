@@ -55,7 +55,7 @@
             <destination>{7e383e3d-e9e0-45b4-9bc2-ae9f231fe589}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{77e4c613-2f68-4e67-a5df-ae0a014e71b2}</destination>
+            <destination>{d997d8ec-dfdb-447d-97a7-d7a7c1420bec}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{f1248ba1-a2b3-41dd-bd7b-53d2cac9bb29}"/>
@@ -211,10 +211,10 @@
     </object>
     <object class="MixerBusPanner" id="{0b9a83d9-0caf-4fc6-a5a7-d7e70e45d35e}">
         <property name="surroundPanDirection">
-            <value>26.541769</value>
+            <value>-3.57633448</value>
         </property>
         <property name="surroundPanExtent">
-            <value>54.3091545</value>
+            <value>243.175537</value>
         </property>
     </object>
     <object class="MixerBusFader" id="{b009b2cd-1306-4dc6-91c5-635c0ac381c4}"/>

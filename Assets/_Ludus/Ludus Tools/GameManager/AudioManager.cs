@@ -53,6 +53,24 @@ public class AudioManager : MonoBehaviour {
 		else Debug.LogError("BGM instance not found");
 	}
 
+	public void SetBGM ( float value ) {
+		string masterBusString = "bus:/BGM";
+		FMOD.Studio.Bus masterBus;
 
+		masterBus = FMODUnity.RuntimeManager.GetBus (masterBusString);
+
+		masterBus.setVolume (value);
+	}
+
+	public void SetSFX ( float value ) {
+		string masterBusString = "bus:/SFX";
+		FMOD.Studio.Bus masterBus;
+
+		masterBus = FMODUnity.RuntimeManager.GetBus (masterBusString);
+
+		masterBus.setVolume (value);
+
+
+	}
 
 }
