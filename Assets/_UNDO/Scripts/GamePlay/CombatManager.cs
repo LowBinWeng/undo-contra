@@ -32,7 +32,7 @@ public class CombatManager : MonoBehaviour {
 	IEnumerator TimeCounterRoutine() {
 		while(true) {
 			timer += (double)Time.deltaTime;
-			timerLabel.text = TimeTools.ConvertSecondsToPrecisionStringFormat( timer, "{0}:{1}:{2}","00");
+			timerLabel.text = TimeTools.ConvertSecondsToPrecisionStringFormat( timer, "{0} : {1} : {2}","00");
 			yield return null;
 		}
 	}
