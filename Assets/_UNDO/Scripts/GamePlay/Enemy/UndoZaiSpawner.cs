@@ -11,6 +11,8 @@ public class UndoZaiSpawner : MonoBehaviour {
 	int spawned = 0;
 	public int maxSpawns = 0;
 
+	List<Transform> spawnedUndoZais = new List<Transform>();
+
 	private static UndoZaiSpawner _instance;
 	public static UndoZaiSpawner Instance {
 		get {
@@ -38,13 +40,23 @@ public class UndoZaiSpawner : MonoBehaviour {
 
 
 	void Spawn() {
-		PoolManager.Pools["UndoZai"].Spawn( undoZai, new Vector3( Random.Range(-spawnRange,spawnRange),0,6f), this.transform.rotation );
+		Transform t = PoolManager.Pools["UndoZai"].Spawn( undoZai, new Vector3( Random.Range(-spawnRange,spawnRange),0,6f), this.transform.rotation );
+
+		spawnedUndoZais.Add(t);
 		spawned++;
+	}
+
+	public void StopSpawning() {
+		StopAllCoroutines();
+		for ( int i = spawnedUndoZais.Count-1; i >= 0; i-- ) {
+			Despawn( spawnedUndoZais[i] );
+		}
 	}
 
 	public void Despawn( Transform t ) {
 		UndoZaiSpawner.Instance.spawned--;
 		PoolManager.Pools["UndoZai"].Despawn(t );
+		spawnedUndoZais.Remove(t);
 	}
 
 

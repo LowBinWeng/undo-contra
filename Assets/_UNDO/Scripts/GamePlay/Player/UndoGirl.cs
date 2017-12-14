@@ -11,6 +11,7 @@ public class UndoGirl : Character {
 		_isDead = true;
 		meshRoot.rotation = Quaternion.identity;
 		CutsceneManager.Instance.PlayCutscene( Cutscene.GameOver );
+		AudioManager.Instance.StopBGM(true);
 	}
 
 	void SetCursor ( bool active ) {

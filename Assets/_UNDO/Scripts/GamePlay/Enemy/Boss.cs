@@ -279,6 +279,6 @@ public class Boss : Enemy {
 		_isDead = true;
 		StopAllCoroutines ();
 		FlashCharacter();
-		CutsceneManager.Instance.PlayCutscene( Cutscene.Victory );
+		CombatManager.Instance.EndGame();
 	}
 }

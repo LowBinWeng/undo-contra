@@ -15,9 +15,9 @@ public class AudioController : MonoBehaviour {
 		switch (audioCategory) {
 		case AudioCategory.BGM:
 			if (PlayerPrefs.HasKey ("BGM") == false) {
-				PlayerPrefs.SetFloat ("BGM", 0.8f);
-				AudioManager.Instance.SetBGM (0.8f);
-				slider.value = 0.8f;
+				PlayerPrefs.SetFloat ("BGM", 0.5f);
+				AudioManager.Instance.SetBGM (0.5f);
+				slider.value = 0.5f;
 			} else {
 				float value = PlayerPrefs.GetFloat ("BGM");
 				AudioManager.Instance.SetBGM (value);
@@ -27,9 +27,9 @@ public class AudioController : MonoBehaviour {
 
 		case AudioCategory.SFX:
 			if (PlayerPrefs.HasKey ("SFX") == false) {
-				PlayerPrefs.SetFloat ("SFX", 0.8f);
-				AudioManager.Instance.SetSFX (0.8f);
-				slider.value = 0.8f;
+				PlayerPrefs.SetFloat ("SFX", 0.5f);
+				AudioManager.Instance.SetSFX (0.5f);
+				slider.value = 0.5f;
 			} else {
 				float value = PlayerPrefs.GetFloat ("SFX");
 				AudioManager.Instance.SetSFX (value);
